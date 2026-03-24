@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion LAN</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tauri&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS_page.css">
+    <link rel="stylesheet" href="CSS.css">
+    <script src="java_projet_jeu.js"></script>
+</head>
+
+<body>
+    <div class="transition-layer"></div>
+
+    
+    <div id="barre-nav">
+        <div class="texte-menu-deroulant">
+            <a href="page_accueil.html"><img src="image/genet-x.ico" height="80px" width="100%" id="logo"></a>
+        </div>
+        <div class="texte-menu-deroulant">
+            <button class="bouton-deroulant">Information Jeu</button>
+            <div class="contenu-deroulant">
+                <a href="histoire.html">Histoire</a>
+                <a href="personnages.html">Personnages</a>
+                <a href="carte.html">Carte</a>
+            </div>
+        </div>
+        <div class="texte-menu-deroulant">
+            <button class="bouton-deroulant">Comment jouer</button>
+            <div class="contenu-deroulant">
+                <a href="regles.html">Règles</a>
+                <a href="connexion_lan.html">Connexion Lan</a>
+            </div>
+        </div>
+        
+        <div class="texte-menu-deroulant">
+            <button class="bouton-deroulant">Mises-à-jour</button>
+            <div class="contenu-deroulant">
+                <a href="mises_a_jour.html">Mises-à-jour</a>
+                <a href="patches_a_venir.html">Patches à venir</a>
+                <a href="soutenance1.html">Soutenance 1</a>
+                <a href="soutenance2.html">Soutenance 2</a>
+                <a href="soutenance3.html">Soutenance 3</a>
+            </div>
+        </div>
+        <div class="texte-menu-deroulant">
+            <button class="bouton-deroulant">L'équipe Genet-X</button>
+            <div class="contenu-deroulant">
+                <a href="membres.html">Les Membres</a>
+                <a href="cdst.html">CDST</a>
+                <a href="cdsf.html">CDSF</a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div>
+        <div id="header"> Connexion LAN</div>
+        
+        <div class="rang">
+            <div class="gauche">
+                <h2>Menu</h2>
+                <input type="text" id="recherche" onkeyup="menu()" placeholder="Search.." title="Type in a category">
+                <ul id="menu">
+                    <li><a href="page_accueil.html">Acceuil</a></li>
+                    <li><a href="carte.html">Carte</a></li>
+                    <li><a href="cdsf.html">CDSF</a></li>
+                    <li><a href="cdst.html">CDST</a></li>
+                    <li><a href="connexion_lan.html">Connexion Lan</a></li>
+                    <li><a href="histoire.html">Histoire</a></li>
+                    <li><a href="membres.html">Les membres</a></li>
+                    <li><a href="mises-a-jour.html">Mises à Jour</a></li>
+                    <li><a href="patches_a_venir.html">Patches à venir</a></li>
+                    <li><a href="personnages.html">Personnages</a></li>
+                    <li><a href="regles.html">Règles</a></li>
+                    <li><a href="soutenance1.html">Soutenance 1</a></li>
+                    <li><a href="soutenance2.html">Soutenance 2</a></li>
+                    <li><a href="soutenance3.html">Soutenance 3</a></li>
+
+                </ul>
+            </div>
+            
+        <div id="mySidenav" class="sidenav"> 
+            <a href="#" id="sous_titre_1" onclick="scrollToSection('section1');return false;" >Présentation</a> <!-- return false; permet de ne pas recharger la page -->
+            <a href="#" id="sous_titre_2" onclick="scrollToSection('section2');return false;">Besoins </a>
+            <a href="#" id="sous_titre_3" onclick="scrollToSection('section3');return false;">Choix</a>
+            <a href="#" id="sous_titre_4" onclick="scrollToSection('section4');return false;">Manoeuvre</a>
+            <a href="#" id="sous_titre_5" onclick="scrollToSection('section5');return false;">Intégration</a>
+            
+
+        </div>
+
+        <div id="centre_page">
+            <section id="section1">
+                <h1>Présentation générale de la fonctionnalité</h1>
+                <texte>La connexion LAN est une fonctionnalité essentielle du projet GENET-X, car le jeu repose exclusivement sur une expérience coopérative en duo. Cette fonctionnalité permet à deux joueurs connectés sur un même réseau local de se rejoindre automatiquement afin de partager une partie.<br><br>
+                        Le système a été conçu pour être simple d’utilisation, robuste et compatible avec différents environnements réseau (réseau domestique, réseau scolaire, réseau d’entreprise).<br><br>
+                        L’objectif principal de la connexion LAN est d’assurer une communication fluide entre les deux joueurs, tout en garantissant la fiabilité des données critiques du jeu, comme la progression ou l’état des îles débloquées.
+                    </texte>
+            </section>
+        
+            <section id="section2">
+                <h1>Besoins fonctionnels et contraintes</h1>
+                <texte><b>La mise en place de la connexion LAN répond à plusieurs besoins fonctionnels précis :</b><br>
+                        - Permettre la découverte automatique des serveurs disponibles sur le réseau local<br>
+                        - limiter la partie à exactement deux joueurs<br>
+                        - Garantir une faible latence pour les déplacements en jeu<br>
+                        - Assurer la fiabilité des informations importantes (progression, sauvegarde)<br><br>
+                        <b>Des contraintes techniques importantes ont également été identifiées :</b><br>
+                        - Compatibilité entre différents systèmes d’exploitation (Windows et macOS)<br>
+                        - Fonctionnement sur des réseaux aux règles de sécurité différentes<br>
+                        - Gestion des appareils non joueurs présents sur le réseau local<br>
+                        - Intégration fluide avec le menu du jeu sans bloquer l’interface graphique<br>
+                    </texte>
+            </section>
+        
+            <section id="section3">
+                <h1>Choix techniques et architecture réseau</h1>
+                <texte>Pour répondre à ces besoins, une architecture réseau hybride a été mise en place, reposant sur l’utilisation conjointe des protocoles UDP et TCP.<br><br>
+                        Le protocole UDP est utilisé pour la transmission des données de déplacement des joueurs. Ces données sont envoyées de manière fréquente et doivent être traitées rapidement afin de garantir une animation fluide à l’écran. Une perte ponctuelle de paquets n’impacte pas significativement l’expérience utilisateur.<br><br>
+                        Le protocole TCP est réservé aux données critiques nécessitant une transmission fiable, comme la sauvegarde de la progression ou le déblocage de nouvelles zones du jeu. Ce choix permet de s’assurer que ces informations sont correctement reçues et traitées.<br><br>
+                        L’architecture repose sur un modèle serveur–clients, où un joueur peut héberger la partie en lançant un serveur, tandis que l’autre joueur s’y connecte en tant que client.<br><br>
+                    </texte>
+            </section>
+
+            <section id="section4">
+                <h1>Fonctionnement détaillé de la connexion LAN</h1>
+                <texte>Lorsqu’un joueur lance un serveur, le programme récupère automatiquement l’adresse IP de la machine hôte et ouvre des ports de communication TCP et UDP. Le serveur diffuse ensuite ses informations sur le réseau local afin d’être détecté par les clients disponibles.<br><br>
+                        Les clients analysent régulièrement le réseau local afin d’identifier les serveurs actifs. Une fois un serveur détecté, il est affiché dans une liste accessible depuis le menu du jeu. L’utilisateur peut alors rejoindre la partie en cliquant sur le serveur souhaité.<br><br>
+                        Afin d’éviter toute connexion non désirée, le serveur conserve une liste des clients connectés. Dès que deux joueurs sont présents, le serveur cesse d’émettre sur le réseau local, empêchant ainsi toute nouvelle connexion.<br><br>
+                        Un système de vérification a également été mis en place pour s’assurer que les appareils détectés sur le réseau correspondent bien à des serveurs GENET-X et non à d’autres périphériques connectés.<br><br>
+                    </texte>
+            </section>
+
+            <section id="section5">
+                <h1>Intégration dans le jeu et évolutivité</h1>
+                <texte>La connexion LAN est directement intégrée dans le menu de démarrage du jeu à travers deux actions principales : la création d’un serveur et la recherche d’un serveur existant. Cette intégration permet à l’utilisateur d’accéder au multijoueur sans configuration manuelle ni manipulation externe.<br><br>
+                        Une fois les deux joueurs connectés, la partie démarre automatiquement. Un système de déconnexion propre est prévu afin d’éviter les fermetures brutales et les erreurs réseau.<br><br>
+                        Cette fonctionnalité constitue une base solide pour l’évolution future du projet. Elle pourra être enrichie par une meilleure synchronisation des états du jeu, l’ajout de nouvelles données réseau ou une extension vers d’autres modes multijoueurs. La connexion LAN représente ainsi un élément structurant et durable de l’architecture de GENET-X.<br><br>
+                    </texte>
+            </section>
+        </div>
+    </div>
+
+    <div>
+    <!-- flèche qui permet le retour en haut de la page -->
+        <a href="#"><img src="fleche.png" alt="Retour en haut de la page" id="fleche_haut_page"></a>
+    </div>
+
+
+<!-- ------------------------------------------------------FOOTER----------------------------------------------------------- -->
+    <footer>
+
+        <div class= bande_couleur>
+
+            <div class="bas_gauche">
+                <center><img src="image/genet-x.ico" height="30%" width="110%" id="logo">
+                <div class="barre_blanche"></div><br>
+                <b><p>Projet étudiant EPITA</p></b>
+                <b><p>Réalisé par :</p></b>
+                <b><p>Victor Goubaud, Mattéo Lachambre, Charlie Moreau</p></b>
+                <b><p>Kylian Dufailly, Mathieu Clerc</p></b></center>
+            </div>
+            <div class="bas_droite">
+                <img src="image/genet-x_logo.png" height="75%" width="60%" id="logo">
+            </div>
+
+
+        </div>
+        <div class="droit">
+            <center><p><i>©2026 Genet-X - Tous droits réservés</i></p></center>
+        </div>
+    </footer>
+    
+
+
+
+    <script>
+        window.onscroll = function () { barre_fixe() }; //lorsque l'utilisateur scroll, la fonction barre_fixe est appelée
+    </script>
+
+
+</body>
+
+
+
+</html>

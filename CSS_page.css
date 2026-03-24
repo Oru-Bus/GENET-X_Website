@@ -1,0 +1,372 @@
+/*-------------------------------------Style pour le menu déroulant du haut------------------------------------------------*/
+
+/* Style de base pour la barre de navigation */
+#barre-nav {
+  position: fixed; /* Modification pour rester fixe */
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex; /* Afficher les éléments en ligne */
+  margin-top: -2%; /* réduire l'espace entre le haut de la fenêtre et le haut de la barre */
+  padding: 20px; /* espacement entre les boutons */
+  background-color: rgb(255, 218, 133);
+  transition: background-color 0.3s, padding 0.3s;
+  z-index: 1001; /* La barre doit être au-dessus de l'image */
+}
+
+/* Style lorsque la barre est fixée en haut de la page */
+#barre-nav.fixe {
+  background-color: rgb(251, 205, 96);
+  padding: 10px 20px;
+  margin-top: 0; /* Ajustement pour réduire l'espace entre le haut de la fenêtre et le haut de la barre fixée */
+  left: 0;
+  margin-left: 0;
+  width: 100%; /* La barre doit occuper toute la largeur de la fenêtre */
+}
+
+
+
+/* Style des boutons du menu déroulant */
+.bouton-deroulant {
+  font-family: 'Poppins', sans-serif;
+  width: 100%;
+  font-size: 110%;
+  border: none;
+  border-radius: 20px 20px 0 0;
+  padding: 12%;
+  background-color: transparent;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+
+/* Style des boutons du menu déroulant lorsque non survolés */
+.texte-menu-deroulant:not(:hover) .bouton-deroulant {
+  color: #ffffff;
+  background-color: transparent;
+}
+
+
+#logo{
+  margin-top: 5%;
+}
+
+/* Style du texte des boutons de la barre fixée */
+.barre-nav.fixe .texte-menu-deroulant .bouton-deroulant {
+    color: white;
+}
+
+  /* Style pour les éléments du menu déroulant */
+.texte-menu-deroulant {
+    position: relative;
+    flex: 1;
+    z-index: 1000;
+}
+
+  /* Style pour la flèche dans les boutons du menu déroulant */
+.bouton-deroulant::after {
+    position: absolute; 
+    bottom: 5px;
+    right: 8px; 
+
+}
+  
+  /* Style pour le contenu du menu déroulant */
+.contenu-deroulant {
+    display: none;
+    position: absolute; 
+    background-color: rgb(249, 206, 106);
+    text-align: center;
+    z-index: 100%;
+    width: 100%;
+    border-radius: 0 0 20px 20px;
+}
+
+/* Style pour les liens du contenu du menu déroulant */
+.contenu-deroulant a {
+    color: white;
+    text-decoration: none;
+    white-space: nowrap;
+    display: block;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 108%;
+    padding-left: 20px;
+    padding-top: 8px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    transition: color 0.3s;
+}
+
+
+/*---------------------------------------------------tête de page ------------------------------------------------------------*/
+
+#header {
+  width: 100%; 
+  line-height: 300%;
+  background: linear-gradient(to bottom, #FCDD8C 0%, #FCDD8C 40%,#C9BD9C 65%,#6E8096 85%, #26547C 100%);
+  font-size: 340%;
+  margin-bottom: 0%;
+  color: white;
+  margin-top: 4.70%;
+  font-family: 'Tauri', sans-serif;
+  text-align: center;
+}
+
+/*-----------------------------------------------Style pour le contenu de la page--------------------------------------------*/
+
+#centre_page{ 
+  width: 65%; 
+  overflow: visible;
+  height: auto;
+  float: left;
+  background-color:transparent;
+  font-size: 14px;
+  color: black;
+  font-weight: normal;
+  text-align: justify;
+  padding: 10px;
+  margin-top: 20px;
+  margin-left: 30px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.membre {
+  display: inline-block;
+  margin: 0 15px;
+  text-decoration: none;
+  overflow: visible;
+}
+#img_membre {
+  width: 160px;
+  height: auto;
+  border-radius: 20px;
+  transition: opacity 0.3s ease;
+  display: block;
+}
+
+.img-wrapper {
+  position: relative;
+  border-radius: 20px;
+  overflow: visible;
+  box-shadow: 8px 12px 30px rgb(91, 93, 100);
+}
+
+.img-wrapper::after {
+  content: "";
+  position: absolute;
+  border-radius: 20px;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.4);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.membre:hover .img-wrapper::after {
+  opacity: 1;
+}
+
+.membre:hover .img-wrapper::after {
+  opacity: 0.85;
+  cursor: pointer;
+}
+
+#membre :hover .img-membre {
+  opacity: 50%;
+}
+
+.prenom {
+  display: block;
+  margin-top: 8px;
+  font-size: 15px;
+  font-family: 'Dosis', sans-serif;
+  font-weight: 600;
+  color: black;
+}
+/*
+  box-shadow: 2px 0 red, -2px 0 blue;
+  animation: glitch 0.3s infinite;
+@keyframes glitch {
+  0% { transform: translate(0) }
+  20% { transform: translate(-2px, 2px) }
+  40% { transform: translate(-2px, -2px) }
+  60% { transform: translate(2px, 2px) }
+  80% { transform: translate(2px, -2px) }
+  100% { transform: translate(0) }
+}
+*/
+/*---------------------------------------------menu gauche (section dans la page)--------------------------------------------*/
+h1 {
+  font-family: 'Dosis', sans-serif;
+  font-size: 30px;
+}
+
+texte{
+  font-size: 19px;
+  font-family: 'Roboto', sans-serif;
+}
+
+#mySidenav a {
+  position: absolute; 
+  left: -9%;
+  transition: 0.5s;
+  width: 7.5%; 
+  padding: 1.5%;
+  text-decoration: none;  
+  font-size: 110%; 
+  color: white;
+  border-radius: 0 10px 10px 0;
+}
+
+#mySidenav a:hover {
+  left: 0;
+}
+
+#mySidenav.fixe #sous_titre_1 {
+  z-index: 48787;
+  position:fixed;
+  top: 20%;
+}
+
+
+#mySidenav.fixe #sous_titre_2 {
+  z-index: 48787;
+  position:fixed;
+  top: 30%;
+}
+
+#mySidenav.fixe #sous_titre_3 {
+  z-index: 48787;
+  position:fixed;
+  top: 40%;
+}
+
+#mySidenav.fixe #sous_titre_4 {
+  z-index: 48787;
+  position:fixed;
+  top: 50%;
+}
+
+#mySidenav.fixe #sous_titre_5 {
+  z-index: 48787;
+  position:fixed;
+  top: 60%;
+}
+
+#sous_titre_1 {
+  top: 42.5%;
+  background-color: #FCDD8C;
+}
+
+#sous_titre_2 {
+  top: 52.5%;
+  background-color: #FCDD8C;
+}
+
+#sous_titre_3 {
+  top: 62.5%;
+  background-color: #C9BD9C;
+}
+
+#sous_titre_4 {
+  top: 72.5%;
+  background-color: #6E8096;
+}
+
+#sous_titre_5 {
+  top: 82.5%;
+  background-color: #26547C;
+}
+
+/*-----------------------------------------------Style pour la barre de recherche--------------------------------------------*/
+
+.rang {
+  display: flex;
+}
+
+.gauche {
+  padding: 15px 0;
+  background-color:#e7e6eb;
+  margin-top: 2%;
+  margin-left: 2%;
+  border-radius: 20px 20px 20px 20px;
+}
+
+.gauche h2 {
+  padding-left: 8px;
+}
+
+
+#recherche {
+  width: 84%;
+  font-size: 18px;
+  padding: 11px;
+  margin-left: 3%;
+  margin-bottom: 2%;
+  border: 1px solid #ddd;
+}
+
+#menu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#menu li a {
+  padding: 12px;
+  text-decoration: none;
+  color: black;
+  display: block
+}
+
+#menu li a:hover {
+  background-color: #eee;
+}
+
+
+/*------------------------------- Style pour le bouton de retour en haut de page --------------------------------------------*/
+#fleche_haut_page {
+  position: fixed;
+  width: 1.3%;
+  height: 2.4%;
+  bottom: 8.5%;
+  right: 20px;
+  border: 1px solid black;
+  background-color: transparent;
+  border-radius: 55%;
+  padding: 15px;
+  box-sizing: content-box;
+  transition: 0.5s;
+}
+
+#fleche_haut_page:hover {
+  transition: 0.5s;
+  background-color: #ddd;
+}
+
+html{scroll-behavior:smooth} 
+
+/*------------------------------------------------------Animation-page------------------------------------------------------------*/
+
+.transition-layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(255, 218, 133);
+    z-index: 10000;
+    pointer-events: none;
+    transform: translateY(0);
+    transition: transform 0.4s ease-in-out;
+}
+
+.transition-layer.hidden {
+    transform: translateY(100%);
+}
+
+
+.transition-layer.coming-down {
+    transition: none;
+    transform: translateY(-100%);
+}

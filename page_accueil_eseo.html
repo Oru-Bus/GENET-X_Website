@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page d'accueil</title>
+    <link rel="shortcut icon" href="image/genet-x_logo.ico">
+    <script src="java_projet_jeu.js"></script>
+    <link rel="stylesheet" href="accueil.css">
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="CSS.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body onscroll="barre_fixe()" onload="on_load_map()"> 
+    <section class="video-fond">
+        <video autoplay muted loop>
+            <source src="eseo-accueil.mp4" type="video/mp4">
+        </video>
+        <div class="barre-nav" id="nav-barre-header">
+            <div class="texte-menu-deroulant">
+                <img src="image/logo eseo blanc.png" height="60px" width="90%">
+            </div>
+            <div class="texte-menu-deroulant">
+                <button class="bouton-deroulant">GENET-X</button>
+                <div class="contenu-deroulant">
+                    <a href="#">Sous-partie</a>
+                    <a href="#">Sous-partie</a>
+                    <a href="#">Sous-partie</a>
+                    <a href="#">Sous-partie</a>
+                </div>
+            </div>
+            <div class="texte-menu-deroulant">
+                <button class="bouton-deroulant">Section 2</button>
+                <div class="contenu-deroulant">
+                    <a href="#">Sous-partie</a>
+                    <a href="#">Sous-partie</a>
+                    <a href="#">Sous-partie</a>
+                    <a href="#">Sous-partie</a>
+                </div>
+            </div>
+            <div class="texte-menu-deroulant">
+                <button class="bouton-deroulant">Section 3</button>
+                <div class="contenu-deroulant">
+                    <a href="#">Sous-partie</a>
+                    <a href="#">Sous-partie</a>
+                    <a href="#">Sous-partie</a>
+                </div>
+            </div>
+            <div class="texte-menu-deroulant">
+                <button class="bouton-deroulant">Section 4</button>
+                <div class="contenu-deroulant">
+                    <a href="#">Sous-partie</a>
+                    <a href="#">Sous-partie</a>
+                    <a href="#">Sous-partie</a>
+                    <a href="#">Sous-partie</a>
+                    <a href="#">Sous-partie</a>
+                    <a href="#">Sous-partie</a>
+                    <a href="#">Sous-partie</a>
+                </div>
+            </div>
+            <div class="texte-menu-deroulant">
+                <button class="bouton-deroulant">Section 5</button>
+                <div class="contenu-deroulant">
+                    <a href="#">Sous-partie</a>
+                    <a href="#">Sous-partie</a>
+                    <a href="#">Sous-partie</a>
+                    <a href="#">Sous-partie</a>
+                    <a href="#">Sous-partie</a>
+                </div>
+            </div>
+        </div> 
+    </section>
+ 
+    
+
+    
+    <table>
+        <tr>
+            <td><span class="number-cell" id="stats">6930</span> <span class="text-cell"><br>ingénieurs <br> diplômés</span></td>
+            <td><span class="number-cell" id="stats2">5415</span> <span class="text-cell">offres <br> de stages par <br>an</span></td>
+            <td><span class="number-cell" id="stats3">1610</span> <span class="text-cell"><br>entreprises <br>partenaires</span></td>
+            <td><span class="number-cell" id="stats4">0</span> <span class="text-cell">double-<br>diplômes à <br>l'étranger</span></td>
+            <td><span class="number-cell" id="stats5">0</span> <span class="text-cell">%<br>d'embauche dans <br>les 6 mois</span></td>
+        </tr>
+    </table>
+
+
+
+
+
+    <div id="map"></div>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1159.2239038045923!2d-0.5522050865844835!3d47.49318807250956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48087918e6093a5b%3A0x18c2994402ec2868!2sESEO%20Angers%20-%20Grande%20Ecole%20d&#39;Ing%C3%A9nieurs%20G%C3%A9n%C3%A9ralistes!5e0!3m2!1sfr!2sfr!4v1701611719027!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    <!-- ------------------------------------------------------FOOTER----------------------------------------------------------- -->
+    <footer>
+
+        <div class= bande_couleur>
+
+            <table class="tb_bas_de_page">
+                <tr>
+                <td><center><img src="image/logo eseo blanc.png" width="42%"/>
+                <p>_____________________________________________________________________</p></center></td>
+
+                <td><center><h2>AUTRES LIENS</h2>
+                <h6>______________________________________</h6>
+                <a href="mentions légales.html" class="texte_mention_legales">Mentions légales</a></center></td>
+                <td><center><h2>SUIVEZ-NOUS</h2>
+                <h6>______________________________________</h6>
+                <a href="https://www.facebook.com/GroupeESEO/"> <img src="image/facebook.png" width="5%"/> </a>  &nbsp&nbsp&nbsp
+                <a href="https://twitter.com/Groupe_ESEO"> <img src="image/twitter.png" width="10%"/> </a>   &nbsp&nbsp&nbsp
+                <a href="https://www.youtube.com/user/ESEOsiteOfficiel"> <img src="image/youtube.png" width="10%"/> </a></center></td>
+                </tr>
+
+            </table>
+
+            <table class="tb_bas_de_page">
+                <tr>
+                <td><h3>ESEO Angers</h3>
+                <p><img src="image/adresse.png" width="3%"/> <a class="texte_mention_legales" href="https://www.google.fr/maps/place/ESEO+Angers+-+Grande+Ecole+d'Ing%C3%A9nieurs+G%C3%A9n%C3%A9ralistes/@47.4933278,-0.5535588,17z/data=!3m1!4b1!4m6!3m5!1s0x48087918e6093a5b:0x18c2994402ec2868!8m2!3d47.4933242!4d-0.5509839!16s%2Fg%2F1thlytz4?entry=ttu" > 
+                    10 boulevard Jeanneteau CS 90 717 - 49107 Angers Cedex 2 </a>
+                </br><img src="image/téléphone.png" width="3.5%"> <a class="texte_mention_legales" href="tel:0241866767">02 41 86 67 67</a>
+                </br><img src="image/téléphone bulle.png" width="4%"/> <a class="texte_mention_legales" href="tel:0622693304">06 22 69 33 04</a>
+                </p>
+                <h3>ESEO Paris-Vélizy</h3>
+                <p><img src="image/adresse.png" width="3%"/> <a class="texte_mention_legales" href="https://www.google.fr/maps/place/ESEO/@48.7841317,2.2075857,17z/data=!3m1!5s0x47e67bdbfaba6133:0x32f97a7808c22a7e!4m6!3m5!1s0x47e67bd963fffc0f:0x84ff0a8f50fc7667!8m2!3d48.7841282!4d2.2101606!16s%2Fg%2F11hbhhr9t8?entry=ttu">
+                    13 avenue Morane Saulnier 78140 Vélizy-Villacoublay</a>
+                <br><img src="image/téléphone.png" width="3.5%"/><a class="texte_mention_legales" href="tel:0172241020">01 72 24 10 20</a>
+                </br><img src="image/téléphone bulle.png" width="4%"/> <a class="texte_mention_legales" href="tel:0628604441">06 28 60 44 41</a>
+                </p>
+                <h3>ESEO Dijon</h3>
+                <p><img src="image/adresse.png" width="3%"/> <a class="texte_mention_legales" href="https://www.google.fr/maps/place/ESEO+-+Grande+Ecole+d'Ing%C3%A9nieurs/@47.317764,5.0643906,17z/data=!3m1!4b1!4m6!3m5!1s0x47f29dc3dd3a27a1:0x8a047e029d202c8f!8m2!3d47.3177604!4d5.0669655!16s%2Fg%2F1thfdsfb?entry=ttu">
+                     rue Sully 21000 Dijon </a>
+                </br><img src="image/téléphone.png" width="3.5%"/> <a class="texte_mention_legales" href="tel:0345433210">03 45 43 32 10</a>
+                </br><img src="image/téléphone bulle.png" width="4%"/><a class="texte_mention_legales" href="tel:0627652896">06 27 65 28 96</a> 
+                </p></td>
+
+                <td><center><img src="image/logo eespig blanc.png" width="20%"/>&nbsp&nbsp&nbsp&nbsp
+                <img src="image/logo cti blanc.png" width="15%"/>&nbsp&nbsp&nbsp&nbsp
+                <img src="image/logo dicp blanc.png" width="10%"/>
+                </br></br>
+                <img src="image/logo fesic blanc.png" width="20%"/>&nbsp&nbsp&nbsp
+                <img src="image/logo eur-ace blanc.png" width="20%"/>&nbsp&nbsp&nbsp
+                <img src="image/logo campus france blanc.png" width="20%"/>
+                </br></br>
+                <img src="image/logo puissance alpha blanc.png" width="20%"/>&nbsp&nbsp&nbsp&nbsp&nbsp
+                <img src="image/logo grandes écoles blanc.png" width="20%"/></center></td>
+                </tr>
+
+            </table>
+
+        </div>
+
+        <div>
+            <center><p><i>&copy2023 nom du site - Tous droits réservés</i></p></center>
+        </div>
+
+    </footer>
+</body>
+
+</html>
