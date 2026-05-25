@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GENET-X — L'équipe</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tauri&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS_page.css">
+    <link rel="stylesheet" href="CSS.css">
+    <script src="java_projet_jeu.js"></script>
+    <style>
+        /* Grid de membres */
+        .team-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: center;
+            padding: 40px 0;
+        }
+
+        .member-card {
+            width: 200px;
+            text-align: center;
+        }
+
+        .member-card .img-wrapper {
+            width: 170px;
+            height: 200px;
+            margin: 0 auto;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 8px 12px 30px rgb(91, 93, 100);
+            position: relative;
+        }
+
+        .member-card .img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+
+        .member-card:hover .img-wrapper img {
+            transform: scale(1.05);
+        }
+
+        .member-card .img-wrapper::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-color: rgba(252, 221, 140, 0.25);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .member-card:hover .img-wrapper::after {
+            opacity: 1;
+        }
+
+        .member-name {
+            display: block;
+            margin-top: 14px;
+            font-family: 'Dosis', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #26547C;
+        }
+
+        .member-role {
+            display: block;
+            margin-top: 6px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 0.82rem;
+            color: #666;
+            line-height: 1.4;
+        }
+
+        .member-tags {
+            margin-top: 8px;
+        }
+
+        .member-tag {
+            display: inline-block;
+            background: #FCDD8C;
+            color: #26547C;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 600;
+            padding: 2px 10px;
+            border-radius: 12px;
+            margin: 2px;
+        }
+
+        /* Intro banner */
+        .team-intro {
+            background: linear-gradient(135deg, #FCDD8C 0%, #C9BD9C 60%, #6E8096 100%);
+            border-radius: 16px;
+            padding: 28px 32px;
+            margin: 20px 0 10px;
+            color: #26547C;
+        }
+        .team-intro p {
+            font-family: 'Roboto', sans-serif;
+            font-size: 1rem;
+            margin: 0;
+            line-height: 1.7;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="transition-layer"></div>
+
+    <!-- NAVBAR -->
+    <div id="barre-nav">
+        <div class="texte-menu-deroulant">
+            <a href="index.html"><img src="image/genet-x.ico" height="80px" width="100%" id="logo"></a>
+        </div>
+        <div class="texte-menu-deroulant">
+            <button class="bouton-deroulant">Le Jeu</button>
+            <div class="contenu-deroulant">
+                <a href="projet.html">Présentation</a>
+                <a href="regles.html">Règles</a>
+                <a href="connexion_lan.html">Connexion LAN</a>
+            </div>
+        </div>
+        <div class="texte-menu-deroulant">
+            <button class="bouton-deroulant">L'équipe</button>
+            <div class="contenu-deroulant">
+                <a href="membres.html">Les Membres</a>
+            </div>
+        </div>
+        <div class="texte-menu-deroulant">
+            <button class="bouton-deroulant">Ressources</button>
+            <div class="contenu-deroulant">
+                <a href="ressources.html">Ressources externes</a>
+                <a href="telechargements.html">Téléchargements</a>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <div id="header">L'équipe Genet-X</div>
+
+        <div class="rang">
+            <!-- MENU LATÉRAL -->
+            <div class="gauche">
+                <h2>Menu</h2>
+                <input type="text" id="recherche" onkeyup="menu()" placeholder="Rechercher..." title="Rechercher">
+                <ul id="menu">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="projet.html">Présentation</a></li>
+                    <li><a href="membres.html">Les Membres</a></li>
+                    <li><a href="regles.html">Règles</a></li>
+                    <li><a href="connexion_lan.html">Connexion LAN</a></li>
+                    <li><a href="ressources.html">Ressources</a></li>
+                    <li><a href="telechargements.html">Téléchargements</a></li>
+                </ul>
+            </div>
+
+            <!-- SIDENAV -->
+            <div id="mySidenav" class="sidenav">
+                <a href="#" id="sous_titre_1" onclick="scrollToSection('section1');return false;">Équipe</a>
+                <a href="#" id="sous_titre_2" onclick="scrollToSection('section2');return false;">Organisation</a>
+                <a href="#" id="sous_titre_3" onclick="scrollToSection('section3');return false;">Méthodes</a>
+            </div>
+
+            <!-- CONTENU -->
+            <div id="centre_page">
+
+                <section id="section1">
+                    <h1>Les membres de GENET-X</h1>
+
+                    <div class="team-intro">
+                        <p>
+                            GENET-X est un projet réalisé par 5 étudiants d'EPITA. Chaque membre dispose d'un rôle
+                            clairement défini, permettant une répartition efficace des responsabilités sur l'ensemble du développement —
+                            du moteur réseau aux graphismes, en passant par les énigmes et le site web.
+                        </p>
+                    </div>
+
+                    <div class="team-grid">
+
+                        <div class="member-card">
+                            <div class="img-wrapper">
+                                <img src="images/matteo_lachambre.png" alt="Mattéo Lachambre">
+                            </div>
+                            <span class="member-name">Mattéo Lachambre</span>
+                            <div class="member-tags">
+                                <span class="member-tag">Réseau LAN</span>
+                                <span class="member-tag">Cinématiques</span>
+                                <span class="member-tag">Sauvegarde</span>
+                            </div>
+                            <span class="member-role">
+                                Responsable de toute la couche réseau TCP/UDP, de la sauvegarde JSON et de l'intégration des cinématiques.
+                            </span>
+                        </div>
+
+                        <div class="member-card">
+                            <div class="img-wrapper">
+                                <img src="images/mathieu_clerc.png" alt="Mathieu Clerc">
+                            </div>
+                            <span class="member-name">Mathieu Clerc</span>
+                            <div class="member-tags">
+                                <span class="member-tag">Menu</span>
+                                <span class="member-tag">Graphismes</span>
+                                <span class="member-tag">Exécutable</span>
+                            </div>
+                            <span class="member-role">
+                                Interface utilisateur, direction artistique des personnages et création de l'installateur .msi avec WiX Toolset.
+                            </span>
+                        </div>
+
+                        <div class="member-card">
+                            <div class="img-wrapper">
+                                <img src="images/kylian_dufailly.png" alt="Kylian Dufailly">
+                            </div>
+                            <span class="member-name">Kylian Dufailly</span>
+                            <div class="member-tags">
+                                <span class="member-tag">Déplacements</span>
+                                <span class="member-tag">Hitbox</span>
+                                <span class="member-tag">Items</span>
+                            </div>
+                            <span class="member-role">
+                                Système de déplacement des joueurs, gestion des collisions et hitbox, création des équipements utilisables.
+                            </span>
+                        </div>
+
+                        <div class="member-card">
+                            <div class="img-wrapper">
+                                <img src="images/charlie_Moreau.png" alt="Charlie Moreau">
+                            </div>
+                            <span class="member-name">Charlie Moreau</span>
+                            <div class="member-tags">
+                                <span class="member-tag">Génétique</span>
+                                <span class="member-tag">Carte</span>
+                            </div>
+                            <span class="member-role">
+                                Implémentation de la mécanique génétique dans le gameplay et gestion des limites de la carte.
+                            </span>
+                        </div>
+
+                        <div class="member-card">
+                            <div class="img-wrapper">
+                                <img src="images/victor_goubaur.png" alt="Victor Goubaud">
+                            </div>
+                            <span class="member-name">Victor Goubaud</span>
+                            <div class="member-tags">
+                                <span class="member-tag">Site web</span>
+                                <span class="member-tag">Graphismes cartes</span>
+                                <span class="member-tag">Énigmes</span>
+                            </div>
+                            <span class="member-role">
+                                Conception et développement du site internet, design des cartes du jeu et création des énigmes.
+                            </span>
+                        </div>
+
+                    </div>
+                </section>
+
+                <section id="section2">
+                    <h1>Organisation du projet</h1>
+                    <texte>
+                        Chaque membre dispose d'un domaine de responsabilité principal, tout en contribuant à la cohérence
+                        globale du projet lors des sessions collectives.<br><br>
+
+                        <b>Réunions régulières</b><br>
+                        Des réunions périodiques avaient lieu un week-end sur deux ou trois pour faire le point sur
+                        l'avancement, identifier les besoins d'aide et définir les prochaines étapes.<br><br>
+
+                        <b>Communication quotidienne</b><br>
+                        Un serveur Discord centralisait les échanges. Un canal dédié recevait automatiquement les
+                        notifications de push GitHub via webhooks, permettant à tous de rester informés des modifications.<br><br>
+
+                        <b>Gestion du code</b><br>
+                        Deux dépôts privés GitHub ont été utilisés — le second, plus structuré, a été conservé jusqu'à
+                        la livraison finale. La gestion des branches a progressivement été maîtrisée au fil du projet.
+                    </texte>
+                </section>
+
+                <section id="section3">
+                    <h1>Méthodes de travail</h1>
+                    <texte>
+                        <b>Sessions en présentiel</b><br>
+                        Des sessions de travail en petits groupes ont favorisé la coordination sur des fonctionnalités
+                        nécessitant plusieurs membres (intégration réseau / affichage, personnages / caméra…).<br><br>
+
+                        <b>Aide à l'apprentissage</b><br>
+                        L'équipe a utilisé un GEM Gemini personnalisé, configuré en mode mentor pédagogique pour
+                        Pygame — il guide par analogies et pseudo-code sans jamais fournir de code directement,
+                        afin de développer l'autonomie de chaque membre.<br><br>
+
+                        <b>Ressources</b><br>
+                        Outre l'IA, l'équipe s'est appuyée sur des sites spécialisés, Stack Overflow, la documentation
+                        Pygame/PyTMX, WiX Toolset, et la lecture du livre <em>Les réseaux pour les nuls</em> de Doug Lowe
+                        pour la partie réseau LAN.
+                    </texte>
+                </section>
+
+            </div>
+        </div>
+
+        <div>
+            <a href="#"><img src="fleche.png" alt="Retour en haut de la page" id="fleche_haut_page"></a>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="bande_couleur">
+            <div class="bas_gauche">
+                <center>
+                    <img src="image/genet-x.ico" height="30%" width="110%" id="logo">
+                    <div class="barre_blanche"></div><br>
+                    <b><p>Projet étudiant EPITA</p></b>
+                    <b><p>Réalisé par :</p></b>
+                    <b><p>Victor Goubaud, Mattéo Lachambre, Charlie Moreau</p></b>
+                    <b><p>Kylian Dufailly, Mathieu Clerc</p></b>
+                </center>
+            </div>
+        </div>
+        <div class="droit">
+            <center><p><i>©2026 Genet-X — Tous droits réservés</i></p></center>
+        </div>
+    </footer>
+
+    <script>
+        window.onscroll = function () { barre_fixe(); };
+    </script>
+</body>
+</html>

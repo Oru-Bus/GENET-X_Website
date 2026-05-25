@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GENET-X — Ressources externes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tauri&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS_page.css">
+    <link rel="stylesheet" href="CSS.css">
+    <script src="java_projet_jeu.js"></script>
+    <style>
+        .resource-category {
+            margin-bottom: 36px;
+        }
+        .resource-category h2 {
+            font-family: 'Dosis', sans-serif;
+            font-size: 1.4rem;
+            color: #26547C;
+            border-left: 5px solid #FCDD8C;
+            padding-left: 14px;
+            margin-bottom: 16px;
+        }
+        .resource-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .resource-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            padding: 14px 16px;
+            border-radius: 12px;
+            margin-bottom: 10px;
+            background: #f9f8fc;
+            transition: background 0.2s;
+        }
+        .resource-list li:hover { background: #f0eefc; }
+        .resource-icon {
+            font-size: 1.6rem;
+            min-width: 36px;
+            text-align: center;
+            line-height: 1;
+            margin-top: 2px;
+        }
+        .resource-info h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #26547C;
+            margin: 0 0 4px;
+        }
+        .resource-info p {
+            font-family: 'Roboto', sans-serif;
+            font-size: 0.88rem;
+            color: #555;
+            margin: 0 0 6px;
+        }
+        .resource-info a {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.82rem;
+            color: #6E8096;
+            text-decoration: none;
+            border-bottom: 1px solid #C9BD9C;
+            transition: color 0.2s;
+            word-break: break-all;
+        }
+        .resource-info a:hover { color: #26547C; }
+
+        /* Usage badge */
+        .usage-badge {
+            display: inline-block;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 600;
+            padding: 2px 10px;
+            border-radius: 10px;
+            margin-left: 8px;
+            vertical-align: middle;
+        }
+        .badge-jeu { background: #FCDD8C; color: #26547C; }
+        .badge-dev { background: #C9BD9C; color: #26547C; }
+        .badge-assets { background: #6E8096; color: #fff; }
+        .badge-reseau { background: #26547C; color: #FCDD8C; }
+        .badge-ia { background: #e8e0f7; color: #5A4D9B; }
+
+        /* Legend */
+        .legend {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 0.85rem;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="transition-layer"></div>
+
+    <!-- NAVBAR -->
+    <div id="barre-nav">
+        <div class="texte-menu-deroulant">
+            <a href="index.html"><img src="image/genet-x.ico" height="80px" width="100%" id="logo"></a>
+        </div>
+        <div class="texte-menu-deroulant">
+            <button class="bouton-deroulant">Le Jeu</button>
+            <div class="contenu-deroulant">
+                <a href="projet.html">Présentation</a>
+                <a href="regles.html">Règles</a>
+                <a href="connexion_lan.html">Connexion LAN</a>
+            </div>
+        </div>
+        <div class="texte-menu-deroulant">
+            <button class="bouton-deroulant">L'équipe</button>
+            <div class="contenu-deroulant">
+                <a href="membres.html">Les Membres</a>
+            </div>
+        </div>
+        <div class="texte-menu-deroulant">
+            <button class="bouton-deroulant">Ressources</button>
+            <div class="contenu-deroulant">
+                <a href="ressources.html">Ressources externes</a>
+                <a href="telechargements.html">Téléchargements</a>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <div id="header">Ressources externes</div>
+
+        <div class="rang">
+            <!-- MENU LATÉRAL -->
+            <div class="gauche">
+                <h2>Menu</h2>
+                <input type="text" id="recherche" onkeyup="menu()" placeholder="Rechercher..." title="Rechercher">
+                <ul id="menu">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="projet.html">Présentation</a></li>
+                    <li><a href="membres.html">Les Membres</a></li>
+                    <li><a href="regles.html">Règles</a></li>
+                    <li><a href="connexion_lan.html">Connexion LAN</a></li>
+                    <li><a href="ressources.html">Ressources</a></li>
+                    <li><a href="telechargements.html">Téléchargements</a></li>
+                </ul>
+            </div>
+
+            <!-- SIDENAV -->
+            <div id="mySidenav" class="sidenav">
+                <a href="#" id="sous_titre_1" onclick="scrollToSection('section1');return false;">Outils</a>
+                <a href="#" id="sous_titre_2" onclick="scrollToSection('section2');return false;">Biblios</a>
+                <a href="#" id="sous_titre_3" onclick="scrollToSection('section3');return false;">Assets</a>
+                <a href="#" id="sous_titre_4" onclick="scrollToSection('section4');return false;">Références</a>
+                <a href="#" id="sous_titre_5" onclick="scrollToSection('section5');return false;">IA</a>
+            </div>
+
+            <!-- CONTENU -->
+            <div id="centre_page">
+
+                <p style="font-family:'Roboto',sans-serif; font-size:0.95rem; color:#555; margin-bottom:20px;">
+                    Voici l'ensemble des outils, bibliothèques, assets et références utilisés pour développer GENET-X
+                    et son site internet.
+                </p>
+
+                <div class="legend">
+                    <div class="legend-item"><span class="usage-badge badge-jeu">Jeu</span> Utilisé dans le jeu</div>
+                    <div class="legend-item"><span class="usage-badge badge-dev">Développement</span> Outil de dev</div>
+                    <div class="legend-item"><span class="usage-badge badge-assets">Assets</span> Contenu graphique/sonore</div>
+                    <div class="legend-item"><span class="usage-badge badge-reseau">Réseau</span> Partie réseau</div>
+                    <div class="legend-item"><span class="usage-badge badge-ia">IA</span> Intelligence artificielle</div>
+                </div>
+
+                <!-- OUTILS DE DÉVELOPPEMENT -->
+                <section id="section1">
+                    <div class="resource-category">
+                        <h2>🛠️ Outils de développement</h2>
+                        <ul class="resource-list">
+                            <li>
+                                <div class="resource-icon">🗺️</div>
+                                <div class="resource-info">
+                                    <h3>Tiled Map Editor <span class="usage-badge badge-jeu">Jeu</span></h3>
+                                    <p>Éditeur de cartes en tuiles utilisé pour concevoir toutes les îles de l'archipel (calques, collisions, zones d'interaction, portails).</p>
+                                    <a href="https://www.mapeditor.org/" target="_blank">mapeditor.org</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="resource-icon">🐙</div>
+                                <div class="resource-info">
+                                    <h3>GitHub <span class="usage-badge badge-dev">Développement</span></h3>
+                                    <p>Hébergement du code source (dépôts privés) et du site internet (GitHub Pages). Webhooks Discord pour les notifications de push.</p>
+                                    <a href="https://github.com/" target="_blank">github.com</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="resource-icon">📦</div>
+                                <div class="resource-info">
+                                    <h3>WiX Toolset <span class="usage-badge badge-dev">Développement</span></h3>
+                                    <p>Génération de l'installateur .msi pour Windows. Intègre l'interpréteur Python, toutes les dépendances et les ressources du jeu.</p>
+                                    <a href="https://github.com/wixtoolset" target="_blank">github.com/wixtoolset</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="resource-icon">🎨</div>
+                                <div class="resource-info">
+                                    <h3>Coolors <span class="usage-badge badge-dev">Développement</span></h3>
+                                    <p>Générateur de palettes de couleurs utilisé pour définir la direction artistique du jeu (bleu profond, rose, jaune sable…).</p>
+                                    <a href="https://coolors.co/" target="_blank">coolors.co</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- BIBLIOTHÈQUES -->
+                <section id="section2">
+                    <div class="resource-category">
+                        <h2>📚 Bibliothèques Python</h2>
+                        <ul class="resource-list">
+                            <li>
+                                <div class="resource-icon">🎮</div>
+                                <div class="resource-info">
+                                    <h3>Pygame <span class="usage-badge badge-jeu">Jeu</span></h3>
+                                    <p>Bibliothèque principale du projet — gestion de l'affichage, des événements clavier, des sons, des animations et de la boucle de jeu.</p>
+                                    <a href="https://www.pygame.org/" target="_blank">pygame.org</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="resource-icon">🗺️</div>
+                                <div class="resource-info">
+                                    <h3>PyTMX <span class="usage-badge badge-jeu">Jeu</span></h3>
+                                    <p>Lecture et intégration des fichiers de carte exportés depuis Tiled (calques, tuiles animées, zones d'objets).</p>
+                                    <a href="https://pytmx.readthedocs.io/" target="_blank">pytmx.readthedocs.io</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="resource-icon">🌐</div>
+                                <div class="resource-info">
+                                    <h3>Sockets Python (socket) <span class="usage-badge badge-reseau">Réseau</span></h3>
+                                    <p>Module standard Python pour la communication réseau — protocoles TCP (données critiques) et UDP (positions des joueurs).</p>
+                                    <a href="https://docs.python.org/3/library/socket.html" target="_blank">docs.python.org/3/library/socket</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="resource-icon">📄</div>
+                                <div class="resource-info">
+                                    <h3>JSON (module standard) <span class="usage-badge badge-jeu">Jeu</span></h3>
+                                    <p>Sérialisation des données de sauvegarde : positions, inventaires, état des quêtes, musique en cours.</p>
+                                    <a href="https://docs.python.org/3/library/json.html" target="_blank">docs.python.org/3/library/json</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- ASSETS -->
+                <section id="section3">
+                    <div class="resource-category">
+                        <h2>🎵 Assets graphiques &amp; sonores</h2>
+                        <ul class="resource-list">
+                            <li>
+                                <div class="resource-icon">🎵</div>
+                                <div class="resource-info">
+                                    <h3>Artlist — Musiques libres de droits <span class="usage-badge badge-assets">Assets</span></h3>
+                                    <p>Source des musiques d'ambiance du jeu, choisies pour s'adapter à chaque zone et évoluer au fil de la progression.</p>
+                                    <a href="https://artlist.io/royalty-free-music" target="_blank">artlist.io/royalty-free-music</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="resource-icon">🖼️</div>
+                                <div class="resource-info">
+                                    <h3>Tilesets (internet + customisation) <span class="usage-badge badge-assets">Assets</span></h3>
+                                    <p>Les assets graphiques des cartes ont été trouvés en ligne puis personnalisés par l'équipe pour correspondre à l'univers de GENET-X.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- RÉFÉRENCES -->
+                <section id="section4">
+                    <div class="resource-category">
+                        <h2>📖 Références &amp; documentation</h2>
+                        <ul class="resource-list">
+                            <li>
+                                <div class="resource-icon">💬</div>
+                                <div class="resource-info">
+                                    <h3>Stack Overflow <span class="usage-badge badge-dev">Développement</span></h3>
+                                    <p>Référence principale pour la résolution de problèmes techniques (compatibilité Windows/Mac, gestion des sockets, PyTMX…).</p>
+                                    <a href="https://stackoverflow.com/" target="_blank">stackoverflow.com</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="resource-icon">🌐</div>
+                                <div class="resource-info">
+                                    <h3>CodeSensei <span class="usage-badge badge-dev">Développement</span></h3>
+                                    <p>Ressource pédagogique en ligne utilisée pour approfondir les concepts de développement Python et jeu vidéo.</p>
+                                    <a href="https://codesensei.fr/" target="_blank">codesensei.fr</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="resource-icon">📕</div>
+                                <div class="resource-info">
+                                    <h3>Les réseaux pour les nuls — Doug Lowe <span class="usage-badge badge-reseau">Réseau</span></h3>
+                                    <p>Livre de référence pour comprendre les principes fondamentaux des réseaux locaux, de TCP/IP et de l'architecture client/serveur.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- INTELLIGENCE ARTIFICIELLE -->
+                <section id="section5">
+                    <div class="resource-category">
+                        <h2>🤖 Intelligence artificielle</h2>
+                        <ul class="resource-list">
+                            <li>
+                                <div class="resource-icon">✨</div>
+                                <div class="resource-info">
+                                    <h3>Google Gemini — GEM personnalisé <span class="usage-badge badge-ia">IA</span></h3>
+                                    <p>
+                                        Un GEM (Gemini Expertise Module) dédié à l'apprentissage de Pygame a été configuré avec une instruction précise :
+                                        jouer le rôle de <em>mentor expert</em>, sans jamais fournir de code directement copiable.
+                                        Il guide par analogies, pseudo-code et méthode socratique pour développer l'autonomie de l'équipe.<br><br>
+                                        Usage : aide à la compréhension de la boucle de jeu, de la gestion des collisions,
+                                        de l'architecture orientée objet (classe Player, BotManager…) et de la synchronisation animations/déplacements.
+                                    </p>
+                                    <a href="https://gemini.google.com/" target="_blank">gemini.google.com</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+
+        <div>
+            <a href="#"><img src="fleche.png" alt="Retour en haut de la page" id="fleche_haut_page"></a>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="bande_couleur">
+            <div class="bas_gauche">
+                <center>
+                    <img src="image/genet-x.ico" height="30%" width="110%" id="logo">
+                    <div class="barre_blanche"></div><br>
+                    <b><p>Projet étudiant EPITA</p></b>
+                    <b><p>Réalisé par :</p></b>
+                    <b><p>Victor Goubaud, Mattéo Lachambre, Charlie Moreau</p></b>
+                    <b><p>Kylian Dufailly, Mathieu Clerc</p></b>
+                </center>
+            </div>
+        </div>
+        <div class="droit">
+            <center><p><i>©2026 Genet-X — Tous droits réservés</i></p></center>
+        </div>
+    </footer>
+
+    <script>
+        window.onscroll = function () { barre_fixe(); };
+    </script>
+</body>
+</html>

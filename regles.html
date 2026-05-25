@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Règles</title>
+    <title>GENET-X — Règles du jeu</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
@@ -14,221 +14,237 @@
     <link rel="stylesheet" href="CSS_page.css">
     <link rel="stylesheet" href="CSS.css">
     <script src="java_projet_jeu.js"></script>
+    <style>
+        .keybind-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0;
+            font-family: 'Roboto', sans-serif;
+        }
+        .keybind-table th {
+            background: #FCDD8C;
+            color: #26547C;
+            font-family: 'Dosis', sans-serif;
+            padding: 10px 14px;
+            text-align: left;
+        }
+        .keybind-table td {
+            padding: 9px 14px;
+            border-bottom: 1px solid #eee;
+            font-size: 0.93rem;
+        }
+        .keybind-table tr:last-child td { border-bottom: none; }
+        .keybind-table tr:nth-child(even) td { background: #fafafa; }
+        kbd {
+            display: inline-block;
+            background: #26547C;
+            color: #FCDD8C;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.82rem;
+            font-weight: 700;
+            padding: 3px 10px;
+            border-radius: 6px;
+            letter-spacing: 0.5px;
+        }
+        .tip-box {
+            background: #e8f0f8;
+            border-left: 4px solid #26547C;
+            border-radius: 10px;
+            padding: 14px 18px;
+            margin: 16px 0;
+            font-family: 'Roboto', sans-serif;
+            font-size: 0.92rem;
+            color: #1a3550;
+        }
+    </style>
 </head>
 
 <body>
     <div class="transition-layer"></div>
 
-    
+    <!-- NAVBAR -->
     <div id="barre-nav">
         <div class="texte-menu-deroulant">
             <a href="index.html"><img src="image/genet-x.ico" height="80px" width="100%" id="logo"></a>
         </div>
         <div class="texte-menu-deroulant">
-            <button class="bouton-deroulant">Information Jeu</button>
+            <button class="bouton-deroulant">Le Jeu</button>
             <div class="contenu-deroulant">
-                <a href="histoire.html">Histoire</a>
-                <a href="personnages.html">Personnages</a>
-                <a href="carte.html">Carte</a>
-            </div>
-        </div>
-        <div class="texte-menu-deroulant">
-            <button class="bouton-deroulant">Comment jouer</button>
-            <div class="contenu-deroulant">
+                <a href="projet.html">Présentation</a>
                 <a href="regles.html">Règles</a>
-                <a href="connexion_lan.html">Connexion Lan</a>
-            </div>
-        </div>
-        
-        <div class="texte-menu-deroulant">
-            <button class="bouton-deroulant">Mises-à-jour</button>
-            <div class="contenu-deroulant">
-                <a href="mises-a-jour.html">Mises-à-jour</a>
-                <a href="patches_a_venir.html">Patches à venir</a>
-                <a href="soutenance1.html">Soutenance 1</a>
-                <a href="soutenance2.html">Soutenance 2</a>
-                <a href="soutenance3.html">Soutenance 3</a>
+                <a href="connexion_lan.html">Connexion LAN</a>
             </div>
         </div>
         <div class="texte-menu-deroulant">
-            <button class="bouton-deroulant">L'équipe Genet-X</button>
+            <button class="bouton-deroulant">L'équipe</button>
             <div class="contenu-deroulant">
                 <a href="membres.html">Les Membres</a>
-                <a href="cdst.html">CDST</a>
-                <a href="cdsf.html">CDSF</a>
+            </div>
+        </div>
+        <div class="texte-menu-deroulant">
+            <button class="bouton-deroulant">Ressources</button>
+            <div class="contenu-deroulant">
+                <a href="ressources.html">Ressources externes</a>
+                <a href="telechargements.html">Téléchargements</a>
             </div>
         </div>
     </div>
 
-
-
-
     <div>
-        <div id="header"> Règles</div>
-        
+        <div id="header">Règles du jeu</div>
+
         <div class="rang">
             <div class="gauche">
                 <h2>Menu</h2>
-                <input type="text" id="recherche" onkeyup="menu()" placeholder="Search.." title="Type in a category">
+                <input type="text" id="recherche" onkeyup="menu()" placeholder="Rechercher..." title="Rechercher">
                 <ul id="menu">
-                <li><a href="index.html">Acceuil</a></li>
-                <li><a href="carte.html">Carte</a></li>
-                <li><a href="cdsf.html">CDSF</a></li>
-                <li><a href="cdst.html">CDST</a></li>
-                <li><a href="connexion_lan.html">Connexion Lan</a></li>
-                <li><a href="histoire.html">Histoire</a></li>
-                <li><a href="membres.html">Les membres</a></li>
-                <li><a href="mises-a-jour.html">Mises à Jour</a></li>
-                <li><a href="patches_a_venir.html">Patches à venir</a></li>
-                <li><a href="personnages.html">Personnages</a></li>
-                <li><a href="regles.html">Règles</a></li>
-                <li><a href="soutenance1.html">Soutenance 1</a></li>
-                <li><a href="soutenance2.html">Soutenance 2</a></li>
-                <li><a href="soutenance3.html">Soutenance 3</a></li>
-
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="projet.html">Présentation</a></li>
+                    <li><a href="membres.html">Les Membres</a></li>
+                    <li><a href="regles.html">Règles</a></li>
+                    <li><a href="connexion_lan.html">Connexion LAN</a></li>
+                    <li><a href="ressources.html">Ressources</a></li>
+                    <li><a href="telechargements.html">Téléchargements</a></li>
                 </ul>
             </div>
-            
-        <div id="mySidenav" class="sidenav"> 
-            <a href="#" id="sous_titre_1" onclick="scrollToSection('section1');return false;" >Section 1</a> <!-- return false; permet de ne pas recharger la page -->
-            <a href="#" id="sous_titre_2" onclick="scrollToSection('section2');return false;">Section 2</a>
-            <a href="#" id="sous_titre_3" onclick="scrollToSection('section3');return false;">Section 3</a>
-            <a href="#" id="sous_titre_4" onclick="scrollToSection('section4');return false;">Section 4</a>
-            <a href="#" id="sous_titre_5" onclick="scrollToSection('section5');return false;">Section 5</a>
-            
 
+            <div id="mySidenav" class="sidenav">
+                <a href="#" id="sous_titre_1" onclick="scrollToSection('section1');return false;">Objectif</a>
+                <a href="#" id="sous_titre_2" onclick="scrollToSection('section2');return false;">Contrôles</a>
+                <a href="#" id="sous_titre_3" onclick="scrollToSection('section3');return false;">Progression</a>
+                <a href="#" id="sous_titre_4" onclick="scrollToSection('section4');return false;">Quêtes</a>
+                <a href="#" id="sous_titre_5" onclick="scrollToSection('section5');return false;">Conseils</a>
+            </div>
+
+            <div id="centre_page">
+
+                <section id="section1">
+                    <h1>Objectif du jeu</h1>
+                    <texte>
+                        GENET-X est un jeu coopératif en duo. Vos deux personnages — un scientifique et une scientifique —
+                        possèdent des génétiques complémentaires leur permettant d'accéder à différentes zones d'un archipel
+                        ravagé par une pandémie.<br><br>
+                        <b>Votre mission :</b> traverser les 5 îles de l'archipel, résoudre 6 quêtes coopératives
+                        pour comprendre l'origine de la pandémie, et atteindre la dernière île où se trouve la solution
+                        pour sauver l'archipel.<br><br>
+                        <b>Important :</b> le jeu est exclusivement jouable à deux, via connexion LAN.
+                        Ni la coopération ni la communication entre les joueurs ne peuvent être évitées — c'est le cœur du gameplay.
+                    </texte>
+                </section>
+
+                <section id="section2">
+                    <h1>Contrôles</h1>
+                    <texte>Les touches ci-dessous sont les valeurs par défaut. Elles peuvent être reconfigurées depuis le menu des paramètres en jeu.</texte>
+
+                    <table class="keybind-table">
+                        <tr><th>Action</th><th>Touche (défaut)</th></tr>
+                        <tr><td>Se déplacer (haut / bas / gauche / droite)</td><td><kbd>Z</kbd> <kbd>S</kbd> <kbd>Q</kbd> <kbd>D</kbd></td></tr>
+                        <tr><td>Interagir avec un objet / portail</td><td><kbd>G</kbd></td></tr>
+                        <tr><td>Ouvrir le journal de quêtes</td><td><kbd>W</kbd></td></tr>
+                        <tr><td>Ouvrir le menu paramètres</td><td><kbd>Échap</kbd></td></tr>
+                        <tr><td>Sauvegarder la partie</td><td>Menu paramètres</td></tr>
+                    </table>
+
+                    <div class="tip-box">
+                        💡 En cas d'oubli, le mapping complet des touches est toujours accessible depuis le menu paramètres pendant la partie.
+                    </div>
+                </section>
+
+                <section id="section3">
+                    <h1>Progression &amp; exploration</h1>
+                    <texte>
+                        <b>Les îles</b><br>
+                        L'archipel comporte 5 îles. Vous commencez sur la première et progressez en débloquant des portails.
+                        Chaque portail n'apparaît qu'une fois toutes les quêtes de l'île actuelle validées.<br><br>
+
+                        <b>Les portails</b><br>
+                        Pour emprunter un portail, approchez-vous de lui et appuyez sur <kbd>G</kbd>.
+                        Le jeu vérifiera que vous possédez le fragment de clé correspondant dans votre inventaire
+                        (Clé_1 pour l'île 2, Clé_2 pour l'île 3, etc.).<br><br>
+
+                        <b>Les grottes</b><br>
+                        Explorez les grottes de chaque île pour trouver des objets utiles (loot aléatoire)
+                        et les fragments de clés indispensables à la progression. Ces derniers disparaissent
+                        définitivement une fois récupérés.<br><br>
+
+                        <b>Les ennemis</b><br>
+                        Des créatures mutantes gardent certaines zones. Elles patrouillent et attaquent
+                        si vous vous approchez trop. Restez attentif à leur zone de détection et coordonnez-vous
+                        pour les éviter ou les affronter.
+                    </texte>
+                </section>
+
+                <section id="section4">
+                    <h1>Résoudre les quêtes</h1>
+                    <texte>
+                        Il existe deux façons d'accéder aux quêtes :<br><br>
+
+                        <b>1. Journal de quêtes (<kbd>W</kbd>)</b><br>
+                        Appuyez sur <kbd>W</kbd> pour ouvrir votre interface de progression. Les quêtes 1 et 3
+                        se résolvent directement depuis cet espace. Sélectionnez le numéro de la quête
+                        pour accéder à son interface de résolution.<br><br>
+
+                        <b>2. Panneaux de contrôle</b><br>
+                        Les quêtes 2, 4, 5 et 6 nécessitent de trouver des panneaux de contrôle dans le monde.
+                        Chaque quête possède <b>deux panneaux</b> — un par joueur. L'un donne les informations,
+                        l'autre permet d'agir. Vous devrez vous coordonner oralement.<br><br>
+
+                        <b>Quête finale (6)</b><br>
+                        Accessible uniquement si les deux joueurs possèdent les 5 fragments de clé.
+                        Elle se débloque après avoir terminé toutes les quêtes précédentes.
+                    </texte>
+                </section>
+
+                <section id="section5">
+                    <h1>Conseils de jeu</h1>
+                    <texte>
+                        <b>Communiquez constamment</b><br>
+                        Le jeu est conçu pour que chaque joueur détienne une information ou une action que l'autre n'a pas.
+                        La communication vocale (ou par messagerie) est indispensable sur toutes les quêtes.<br><br>
+
+                        <b>Sauvegardez régulièrement</b><br>
+                        Utilisez le menu paramètres pour sauvegarder votre progression.
+                        Plusieurs fichiers de sauvegarde sont disponibles (save_1, save_2…)
+                        et la partie peut être rechargée depuis le menu principal.<br><br>
+
+                        <b>En cas de déconnexion</b><br>
+                        Si la connexion est perdue, le jeu vous ramène automatiquement au menu principal
+                        après 10 secondes. Rechargez votre sauvegarde pour reprendre là où vous en étiez.<br><br>
+
+                        <b>Réseau d'entreprise / scolaire</b><br>
+                        La détection automatique des serveurs peut ne pas fonctionner sur des réseaux très restrictifs.
+                        Consultez la page <a href="connexion_lan.html" style="color:#26547C;font-weight:600;">Connexion LAN</a> pour les alternatives.
+                    </texte>
+                </section>
+
+            </div>
         </div>
 
-        <div id="centre_page">
-            <section id="section1">
-                <h1>About</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pellentesque habitant morbi tristique senectus et netus et. Phasellus egestas tellus rutrum tellus pellentesque eu. Diam maecenas ultricies mi eget mauris pharetra et ultrices. At ultrices mi tempus imperdiet nulla. Ultricies mi quis hendrerit dolor magna. Porttitor rhoncus dolor purus non enim praesent elementum. Faucibus a pellentesque sit amet porttitor eget. At elementum eu facilisis sed. Cursus mattis molestie a iaculis at erat. Lectus vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare. Ultrices dui sapien eget mi proin sed libero enim sed. Sapien faucibus et molestie ac feugiat sed lectus. Dui faucibus in ornare quam viverra orci sagittis eu volutpat. Integer quis auctor elit sed vulputate mi. Mattis aliquam faucibus purus in massa tempor nec. Vel quam elementum pulvinar etiam. Odio aenean sed adipiscing diam donec adipiscing tristique risus nec. Fringilla est ullamcorper eget nulla facilisi etiam. Convallis a cras semper auctor neque vitae tempus.
-        
-                    Leo vel fringilla est ullamcorper eget nulla facilisi etiam. Arcu bibendum at varius vel pharetra vel turpis nunc eget. Arcu dictum varius duis at consectetur lorem donec. Consequat nisl vel pretium lectus quam id leo in. Est lorem ipsum dolor sit amet consectetur adipiscing. Vitae sapien pellentesque habitant morbi tristique senectus et netus. Augue interdum velit euismod in pellentesque. Aliquam malesuada bibendum arcu vitae elementum curabitur. Sit amet mattis vulputate enim nulla. Cursus risus at ultrices mi. Nibh sit amet commodo nulla facilisi nullam. Nascetur ridiculus mus mauris vitae ultricies leo integer malesuada. Mattis enim ut tellus elementum sagittis vitae et leo. Ultricies mi quis hendrerit dolor magna. Id diam maecenas ultricies mi eget mauris pharetra et.
-                    
-                    Non sodalesorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pellentesque habitant morbi tristique senectus et netus et. Phasellus egestas tellus rutrum tellus pellentesque eu. Diam maecenas ultricies mi eget mauris pharetra et ultrices. At ultrices mi tempus imperdiet nulla. Ultricies mi quis hendrerit dolor magna. Porttitor rhoncus dolor purus non enim praesent elementum. Faucibus a pellentesque sit amet porttitor eget. At elementum eu facilisis sed. Cursus mattis molestie a iaculis at erat. Lectus vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare. Ultrices dui sapien eget mi proin sed libero enim sed. Sapien faucibus et molestie ac feugiat sed lectus. Dui faucibus in ornare quam viverra orci sagittis eu volutpat. Integer quis auctor elit sed vulputate mi. Mattis aliquam faucibus purus in massa tempor nec. Vel quam elementum pulvinar etiam. Odio aenean sed adipiscing diam donec adipiscing tristique risus nec. Fringilla est ullamcorper eget nulla facilisi etiam. Convallis a cras semper auctor neque vitae tempus.
-        
-                    Leo vel fringilla est ullamcorper eget nulla facilisi etiam. Arcu bibendum at varius vel pharetra vel turpis nunc eget. Arcu dictum varius duis at consectetur lorem donec. Consequat nisl vel pretium lectus quam id leo in. Est lorem ipsum dolor sit amet consectetur adipiscing. Vitae sapien pellentesque habitant morbi tristique senectus et netus. Augue interdum velit euismod in pellentesque. Aliquam malesuada bibendum arcu vitae elementum curabitur. Sit amet mattis vulputate enim nulla. Cursus risus at ultrices mi. Nibh sit amet commodo nulla facilisi nullam. Nascetur ridiculus mus mauris vitae ultricies leo integer malesuada. Mattis enim ut tellus elementum sagittis vitae et leo. Ultricies mi quis hendrerit dolor magna. Id diam maecenas ultricies mi eget mauris pharetra et.
-                    
-                    Non sodales neque sodales ut etiam sit amet nisl purus. Enim blandit volutpat maecenas volutpat blandit aliquam etiam. Dorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pellentesque habitant morbi tristique senectus et netus et. Phasellus egestas tellus rutrum tellus pellentesque eu. Diam maecenas ultricies mi eget mauris pharetra et ultrices. At ultrices mi tempus imperdiet nulla. Ultricies mi quis hendrerit dolor magna. Porttitor rhoncus dolor purus non enim praesent elementum. Faucibus a pellentesque sit amet porttitor eget. At elementum eu facilisis sed. Cursus mattis molestie a iaculis at erat. Lectus vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare. Ultrices dui sapien eget mi proin sed libero enim sed. Sapien faucibus et molestie ac feugiat sed lectus. Dui faucibus in ornare quam viverra orci sagittis eu volutpat. Integer quis auctor elit sed vulputate mi. Mattis aliquam faucibus purus in massa tempor nec. Vel quam elementum pulvinar etiam. Odio aenean sed adipiscing diam donec adipiscing tristique risus nec. Fringilla est ullamcorper eget nulla facilisi etiam. Convallis a cras semper auctor neque vitae tempus.
-        
-                    Leo vel fringilla est ullamcorper eget nulla facilisi etiam. Arcu bibendum at varius vel pharetra vel turpis nunc eget. Arcu dictum varius duis at consectetur lorem donec. Consequat nisl vel pretium lectus quam id leo in. Est lorem ipsum dolor sit amet consectetur adipiscing. Vitae sapien pellentesque habitant morbi tristique senectus et netus. Augue interdum velit euismod in pellentesque. Aliquam malesuada bibendum arcu vitae elementum curabitur. Sit amet mattis vulputate enim nulla. Cursus risus at ultrices mi. Nibh sit amet commodo nulla facilisi nullam. Nascetur ridiculus mus mauris vitae ultricies leo integer malesuada. Mattis enim ut tellus elementum sagittis vitae et leo. Ultricies mi quis hendrerit dolor magna. Id diam maecenas ultricies mi eget mauris pharetra et.
-                    
-                    Non sodales neque sodales ut etiam sit amet nisl purus. Enim blandit volutpat maecenas volutpat blandit aliquam etiam. Dorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pellentesque habitant morbi tristique senectus et netus et. Phasellus egestas tellus rutrum tellus pellentesque eu. Diam maecenas ultricies mi eget mauris pharetra et ultrices. At ultrices mi tempus imperdiet nulla. Ultricies mi quis hendrerit dolor magna. Porttitor rhoncus dolor purus non enim praesent elementum. Faucibus a pellentesque sit amet porttitor eget. At elementum eu facilisis sed. Cursus mattis molestie a iaculis at erat. Lectus vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare. Ultrices dui sapien eget mi proin sed libero enim sed. Sapien faucibus et molestie ac feugiat sed lectus. Dui faucibus in ornare quam viverra orci sagittis eu volutpat. Integer quis auctor elit sed vulputate mi. Mattis aliquam faucibus purus in massa tempor nec. Vel quam elementum pulvinar etiam. Odio aenean sed adipiscing diam donec adipiscing tristique risus nec. Fringilla est ullamcorper eget nulla facilisi etiam. Convallis a cras semper auctor neque vitae tempus.
-        
-                    Leo vel fringilla est ullamcorper eget nulla facilisi etiam. Arcu bibendum at varius vel pharetra vel turpis nunc eget. Arcu dictum varius duis at consectetur lorem donec. Consequat nisl vel pretium lectus quam id leo in. Est lorem ipsum dolor sit amet consectetur adipiscing. Vitae sapien pellentesque habitant morbi tristique senectus et netus. Augue interdum velit euismod in pellentesque. Aliquam malesuada bibendum arcu vitae elementum curabitur. Sit amet mattis vulputate enim nulla. Cursus risus at ultrices mi. Nibh sit amet commodo nulla facilisi nullam. Nascetur ridiculus mus mauris vitae ultricies leo integer malesuada. Mattis enim ut tellus elementum sagittis vitae et leo. Ultricies mi quis hendrerit dolor magna. Id diam maecenas ultricies mi eget mauris pharetra et.
-                    
-                    Non sodales neque sodales ut etiam sit amet nisl purus. Enim blandit volutpat maecenas volutpat blandit aliquam etiam. Dorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pellentesque habitant morbi tristique senectus et netus et. Phasellus egestas tellus rutrum tellus pellentesque eu. Diam maecenas ultricies mi eget mauris pharetra et ultrices. At ultrices mi tempus imperdiet nulla. Ultricies mi quis hendrerit dolor magna. Porttitor rhoncus dolor purus non enim praesent elementum. Faucibus a pellentesque sit amet porttitor eget. At elementum eu facilisis sed. Cursus mattis molestie a iaculis at erat. Lectus vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare. Ultrices dui sapien eget mi proin sed libero enim sed. Sapien faucibus et molestie ac feugiat sed lectus. Dui faucibus in ornare quam viverra orci sagittis eu volutpat. Integer quis auctor elit sed vulputate mi. Mattis aliquam faucibus purus in massa tempor nec. Vel quam elementum pulvinar etiam. Odio aenean sed adipiscing diam donec adipiscing tristique risus nec. Fringilla est ullamcorper eget nulla facilisi etiam. Convallis a cras semper auctor neque vitae tempus.
-        
-                    Leo vel fringilla est ullamcorper eget nulla facilisi etiam. Arcu bibendum at varius vel pharetra vel turpis nunc eget. Arcu dictum varius duis at consectetur lorem donec. Consequat nisl vel pretium lectus quam id leo in. Est lorem ipsum dolor sit amet consectetur adipiscing. Vitae sapien pellentesque habitant morbi tristique senectus et netus. Augue interdum velit euismod in pellentesque. Aliquam malesuada bibendum arcu vitae elementum curabitur. Sit amet mattis vulputate enim nulla. Cursus risus at ultrices mi. Nibh sit amet commodo nulla facilisi nullam. Nascetur ridiculus mus mauris vitae ultricies leo integer malesuada. Mattis enim ut tellus elementum sagittis vitae et leo. Ultricies mi quis hendrerit dolor magna. Id diam maecenas ultricies mi eget mauris pharetra et.
-                    
-                    Non sodales neque sodales ut etiam sit amet nisl purus. Enim blandit volutpat maecenas volutpat blandit aliquam etiam. Dorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pellentesque habitant morbi tristique senectus et netus et. Phasellus egestas tellus rutrum tellus pellentesque eu. Diam maecenas ultricies mi eget mauris pharetra et ultrices. At ultrices mi tempus imperdiet nulla. Ultricies mi quis hendrerit dolor magna. Porttitor rhoncus dolor purus non enim praesent elementum. Faucibus a pellentesque sit amet porttitor eget. At elementum eu facilisis sed. Cursus mattis molestie a iaculis at erat. Lectus vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare. Ultrices dui sapien eget mi proin sed libero enim sed. Sapien faucibus et molestie ac feugiat sed lectus. Dui faucibus in ornare quam viverra orci sagittis eu volutpat. Integer quis auctor elit sed vulputate mi. Mattis aliquam faucibus purus in massa tempor nec. Vel quam elementum pulvinar etiam. Odio aenean sed adipiscing diam donec adipiscing tristique risus nec. Fringilla est ullamcorper eget nulla facilisi etiam. Convallis a cras semper auctor neque vitae tempus.
-        
-                    Leo vel fringilla est ullamcorper eget nulla facilisi etiam. Arcu bibendum at varius vel pharetra vel turpis nunc eget. Arcu dictum varius duis at consectetur lorem donec. Consequat nisl vel pretium lectus quam id leo in. Est lorem ipsum dolor sit amet consectetur adipiscing. Vitae sapien pellentesque habitant morbi tristique senectus et netus. Augue interdum velit euismod in pellentesque. Aliquam malesuada bibendum arcu vitae elementum curabitur. Sit amet mattis vulputate enim nulla. Cursus risus at ultrices mi. Nibh sit amet commodo nulla facilisi nullam. Nascetur ridiculus mus mauris vitae ultricies leo integer malesuada. Mattis enim ut tellus elementum sagittis vitae et leo. Ultricies mi quis hendrerit dolor magna. Id diam maecenas ultricies mi eget mauris pharetra et.
-                    
-                    Non sodales neque sodales ut etiam sit amet nisl purus. Enim blandit volutpat maecenas volutpat blandit aliquam etiam. Dorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pellentesque habitant morbi tristique senectus et netus et. Phasellus egestas tellus rutrum tellus pellentesque eu. Diam maecenas ultricies mi eget mauris pharetra et ultrices. At ultrices mi tempus imperdiet nulla. Ultricies mi quis hendrerit dolor magna. Porttitor rhoncus dolor purus non enim praesent elementum. Faucibus a pellentesque sit amet porttitor eget. At elementum eu facilisis sed. Cursus mattis molestie a iaculis at erat. Lectus vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare. Ultrices dui sapien eget mi proin sed libero enim sed. Sapien faucibus et molestie ac feugiat sed lectus. Dui faucibus in ornare quam viverra orci sagittis eu volutpat. Integer quis auctor elit sed vulputate mi. Mattis aliquam faucibus purus in massa tempor nec. Vel quam elementum pulvinar etiam. Odio aenean sed adipiscing diam donec adipiscing tristique risus nec. Fringilla est ullamcorper eget nulla facilisi etiam. Convallis a cras semper auctor neque vitae tempus.
-        
-                    Leo vel fringilla est ullamcorper eget nulla facilisi etiam. Arcu bibendum at varius vel pharetra vel turpis nunc eget. Arcu dictum varius duis at consectetur lorem donec. Consequat nisl vel pretium lectus quam id leo in. Est lorem ipsum dolor sit amet consectetur adipiscing. Vitae sapien pellentesque habitant morbi tristique senectus et netus. Augue interdum velit euismod in pellentesque. Aliquam malesuada bibendum arcu vitae elementum curabitur. Sit amet mattis vulputate enim nulla. Cursus risus at ultrices mi. Nibh sit amet commodo nulla facilisi nullam. Nascetur ridiculus mus mauris vitae ultricies leo integer malesuada. Mattis enim ut tellus elementum sagittis vitae et leo. Ultricies mi quis hendrerit dolor magna. Id diam maecenas ultricies mi eget mauris pharetra et.
-                    
-                    Non sodales neque sodales ut etiam sit amet nisl purus. Enim blandit volutpat maecenas volutpat blandit aliquam etiam. Dorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pellentesque habitant morbi tristique senectus et netus et. Phasellus egestas tellus rutrum tellus pellentesque eu. Diam maecenas ultricies mi eget mauris pharetra et ultrices. At ultrices mi tempus imperdiet nulla. Ultricies mi quis hendrerit dolor magna. Porttitor rhoncus dolor purus non enim praesent elementum. Faucibus a pellentesque sit amet porttitor eget. At elementum eu facilisis sed. Cursus mattis molestie a iaculis at erat. Lectus vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare. Ultrices dui sapien eget mi proin sed libero enim sed. Sapien faucibus et molestie ac feugiat sed lectus. Dui faucibus in ornare quam viverra orci sagittis eu volutpat. Integer quis auctor elit sed vulputate mi. Mattis aliquam faucibus purus in massa tempor nec. Vel quam elementum pulvinar etiam. Odio aenean sed adipiscing diam donec adipiscing tristique risus nec. Fringilla est ullamcorper eget nulla facilisi etiam. Convallis a cras semper auctor neque vitae tempus.
-        
-                    Leo vel fringilla est ullamcorper eget nulla facilisi etiam. Arcu bibendum at varius vel pharetra vel turpis nunc eget. Arcu dictum varius duis at consectetur lorem donec. Consequat nisl vel pretium lectus quam id leo in. Est lorem ipsum dolor sit amet consectetur adipiscing. Vitae sapien pellentesque habitant morbi tristique senectus et netus. Augue interdum velit euismod in pellentesque. Aliquam malesuada bibendum arcu vitae elementum curabitur. Sit amet mattis vulputate enim nulla. Cursus risus at ultrices mi. Nibh sit amet commodo nulla facilisi nullam. Nascetur ridiculus mus mauris vitae ultricies leo integer malesuada. Mattis enim ut tellus elementum sagittis vitae et leo. Ultricies mi quis hendrerit dolor magna. Id diam maecenas ultricies mi eget mauris pharetra et.
-                    
-                    Non sodales neque sodales ut etiam sit amet nisl purus. Enim blandit volutpat maecenas volutpat blandit aliquam etiam. Dorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pellentesque habitant morbi tristique senectus et netus et. Phasellus egestas tellus rutrum tellus pellentesque eu. Diam maecenas ultricies mi eget mauris pharetra et ultrices. At ultrices mi tempus imperdiet nulla. Ultricies mi quis hendrerit dolor magna. Porttitor rhoncus dolor purus non enim praesent elementum. Faucibus a pellentesque sit amet porttitor eget. At elementum eu facilisis sed. Cursus mattis molestie a iaculis at erat. Lectus vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare. Ultrices dui sapien eget mi proin sed libero enim sed. Sapien faucibus et molestie ac feugiat sed lectus. Dui faucibus in ornare quam viverra orci sagittis eu volutpat. Integer quis auctor elit sed vulputate mi. Mattis aliquam faucibus purus in massa tempor nec. Vel quam elementum pulvinar etiam. Odio aenean sed adipiscing diam donec adipiscing tristique risus nec. Fringilla est ullamcorper eget nulla facilisi etiam. Convallis a cras semper auctor neque vitae tempus.
-        
-                    Leo vel fringilla est ullamcorper eget nulla facilisi etiam. Arcu bibendum at varius vel pharetra vel turpis nunc eget. Arcu dictum varius duis at consectetur lorem donec. Consequat nisl vel pretium lectus quam id leo in. Est lorem ipsum dolor sit amet consectetur adipiscing. Vitae sapien pellentesque habitant morbi tristique senectus et netus. Augue interdum velit euismod in pellentesque. Aliquam malesuada bibendum arcu vitae elementum curabitur. Sit amet mattis vulputate enim nulla. Cursus risus at ultrices mi. Nibh sit amet commodo nulla facilisi nullam. Nascetur ridiculus mus mauris vitae ultricies leo integer malesuada. Mattis enim ut tellus elementum sagittis vitae et leo. Ultricies mi quis hendrerit dolor magna. Id diam maecenas ultricies mi eget mauris pharetra et.
-                    
-                    Non sodales neque sodales ut etiam sit amet nisl purus. Enim blandit volutpat maecenas volutpat blandit aliquam etiam. Dorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pellentesque habitant morbi tristique senectus et netus et. Phasellus egestas tellus rutrum tellus pellentesque eu. Diam maecenas ultricies mi eget mauris pharetra et ultrices. At ultrices mi tempus imperdiet nulla. Ultricies mi quis hendrerit dolor magna. Porttitor rhoncus dolor purus non enim praesent elementum. Faucibus a pellentesque sit amet porttitor eget. At elementum eu facilisis sed. Cursus mattis molestie a iaculis at erat. Lectus vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare. Ultrices dui sapien eget mi proin sed libero enim sed. Sapien faucibus et molestie ac feugiat sed lectus. Dui faucibus in ornare quam viverra orci sagittis eu volutpat. Integer quis auctor elit sed vulputate mi. Mattis aliquam faucibus purus in massa tempor nec. Vel quam elementum pulvinar etiam. Odio aenean sed adipiscing diam donec adipiscing tristique risus nec. Fringilla est ullamcorper eget nulla facilisi etiam. Convallis a cras semper auctor neque vitae tempus.
-        
-                    Leo vel fringilla est ullamcorper eget nulla facilisi etiam. Arcu bibendum at varius vel pharetra vel turpis nunc eget. Arcu dictum varius duis at consectetur lorem donec. Consequat nisl vel pretium lectus quam id leo in. Est lorem ipsum dolor sit amet consectetur adipiscing. Vitae sapien pellentesque habitant morbi tristique senectus et netus. Augue interdum velit euismod in pellentesque. Aliquam malesuada bibendum arcu vitae elementum curabitur. Sit amet mattis vulputate enim nulla. Cursus risus at ultrices mi. Nibh sit amet commodo nulla facilisi nullam. Nascetur ridiculus mus mauris vitae ultricies leo integer malesuada. Mattis enim ut tellus elementum sagittis vitae et leo. Ultricies mi quis hendrerit dolor magna. Id diam maecenas ultricies mi eget mauris pharetra et.
-                    
-                    Non sodales neque sodales ut etiam sit amet nisl purus. Enim blandit volutpat maecenas volutpat blandit aliquam etiam. D neque sodales ut etiam sit amet nisl purus. Enim blandit volutpat maecenas volutpat blandit aliquam etiam. Dui nunc mattis enim ut tellus elementum. Purus viverra accumsan in nisl nisi scelerisque. Viverra nam libero justo laoreet sit amet cursus sit amet. Vestibulum morbi blandit cursus risus at ultrices mi tempus. Pharetra magna ac placerat vestibulum. Et tortor consequat id porta nibh venenatis. Pulvinar etiam non quam lacus suspendisse faucibus interdum posuere. Elementum integer enim neque volutpat ac tincidunt vitae semper quis. Gravida rutrum quisque non tellus orci ac auctor augue. Nisl rhoncus mattis rhoncus urna neque viverra justo nec ultrices. Elementum integer enim neque volutpat ac. Amet dictum sit amet justo donec enim diam vulputate ut.
-                </p>
-            </section>
-        
-            <section id="section2">
-                <h1>Section 2</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pellentesque habitant morbi tristique senectus et netus et. Phasellus egestas tellus rutrum tellus pellentesque eu. Diam maecenas ultricies mi eget mauris pharetra et ultrices. At ultrices mi tempus imperdiet nulla. Ultricies mi quis hendrerit dolor magna. Porttitor rhoncus dolor purus non enim praesent elementum. Faucibus a pellentesque sit amet porttitor eget. At elementum eu facilisis sed. Cursus mattis molestie a iaculis at erat. Lectus vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare. Ultrices dui sapien eget mi proin sed libero enim sed. Sapien faucibus et molestie ac feugiat sed lectus. Dui faucibus in ornare quam viverra orci sagittis eu volutpat. Integer quis auctor elit sed vulputate mi. Mattis aliquam faucibus purus in massa tempor nec. Vel quam elementum pulvinar etiam. Odio aenean sed adipiscing diam donec adipiscing tristique risus nec. Fringilla est ullamcorper eget nulla facilisi etiam. Convallis a cras semper auctor neque vitae tempus.
-        
-                    Leo vel fringilla est ullamcorper eget nulla facilisi etiam. Arcu bibendum at varius vel pharetra vel turpis nunc eget. Arcu dictum varius duis at consectetur lorem donec. Consequat nisl vel pretium lectus quam id leo in. Est lorem ipsum dolor sit amet consectetur adipiscing. Vitae sapien pellentesque habitant morbi tristique senectus et netus. Augue interdum velit euismod in pellentesque. Aliquam malesuada bibendum arcu vitae elementum curabitur. Sit amet mattis vulputate enim nulla. Cursus risus at ultrices mi. Nibh sit amet commodo nulla facilisi nullam. Nascetur ridiculus mus mauris vitae ultricies leo integer malesuada. Mattis enim ut tellus elementum sagittis vitae et leo. Ultricies mi quis hendrerit dolor magna. Id diam maecenas ultricies mi eget mauris pharetra et.
-                    
-                    Non sodales neque sodales ut etiam sit amet nisl purus. Enim blandit volutpat maecenas volutpat blandit aliquam etiam. Dui nunc mattis enim ut tellus elementum. Purus viverra accumsan in nisl nisi scelerisque. Viverra nam libero justo laoreet sit amet cursus sit amet. Vestibulum morbi blandit cursus risus at ultrices mi tempus. Pharetra magna ac placerat vestibulum. Et tortor consequat id porta nibh venenatis. Pulvinar etiam non quam lacus suspendisse faucibus interdum posuere. Elementum integer enim neque volutpat ac tincidunt vitae semper quis. Gravida rutrum quisque non tellus orci ac auctor augue. Nisl rhoncus mattis rhoncus urna neque viverra justo nec ultrices. Elementum integer enim neque volutpat ac. Amet dictum sit amet justo donec enim diam vulputate ut.
-                </p>
-            </section>
-        
-            <section id="section3">
-                <h1>Section 3</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pellentesque habitant morbi tristique senectus et netus et. Phasellus egestas tellus rutrum tellus pellentesque eu. Diam maecenas ultricies mi eget mauris pharetra et ultrices. At ultrices mi tempus imperdiet nulla. Ultricies mi quis hendrerit dolor magna. Porttitor rhoncus dolor purus non enim praesent elementum. Faucibus a pellentesque sit amet porttitor eget. At elementum eu facilisis sed. Cursus mattis molestie a iaculis at erat. Lectus vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare. Ultrices dui sapien eget mi proin sed libero enim sed. Sapien faucibus et molestie ac feugiat sed lectus. Dui faucibus in ornare quam viverra orci sagittis eu volutpat. Integer quis auctor elit sed vulputate mi. Mattis aliquam faucibus purus in massa tempor nec. Vel quam elementum pulvinar etiam. Odio aenean sed adipiscing diam donec adipiscing tristique risus nec. Fringilla est ullamcorper eget nulla facilisi etiam. Convallis a cras semper auctor neque vitae tempus.
-        
-                    Leo vel fringilla est ullamcorper eget nulla facilisi etiam. Arcu bibendum at varius vel pharetra vel turpis nunc eget. Arcu dictum varius duis at consectetur lorem donec. Consequat nisl vel pretium lectus quam id leo in. Est lorem ipsum dolor sit amet consectetur adipiscing. Vitae sapien pellentesque habitant morbi tristique senectus et netus. Augue interdum velit euismod in pellentesque. Aliquam malesuada bibendum arcu vitae elementum curabitur. Sit amet mattis vulputate enim nulla. Cursus risus at ultrices mi. Nibh sit amet commodo nulla facilisi nullam. Nascetur ridiculus mus mauris vitae ultricies leo integer malesuada. Mattis enim ut tellus elementum sagittis vitae et leo. Ultricies mi quis hendrerit dolor magna. Id diam maecenas ultricies mi eget mauris pharetra et.
-                    
-                    Non sodales neque sodales ut etiam sit amet nisl purus. Enim blandit volutpat maecenas volutpat blandit aliquam etiam. Dui nunc mattis enim ut tellus elementum. Purus viverra accumsan in nisl nisi scelerisque. Viverra nam libero justo laoreet sit amet cursus sit amet. Vestibulum morbi blandit cursus risus at ultrices mi tempus. Pharetra magna ac placerat vestibulum. Et tortor consequat id porta nibh venenatis. Pulvinar etiam non quam lacus suspendisse faucibus interdum posuere. Elementum integer enim neque volutpat ac tincidunt vitae semper quis. Gravida rutrum quisque non tellus orci ac auctor augue. Nisl rhoncus mattis rhoncus urna neque viverra justo nec ultrices. Elementum integer enim neque volutpat ac. Amet dictum sit amet justo donec enim diam vulputate ut.
-                </p>
-            </section>
-
-            <section id="section4">
-                <h1>Section 4</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pellentesque habitant morbi tristique senectus et netus et. Phasellus egestas tellus rutrum tellus pellentesque eu. Diam maecenas ultricies mi eget mauris pharetra et ultrices. At ultrices mi tempus imperdiet nulla. Ultricies mi quis hendrerit dolor magna. Porttitor rhoncus dolor purus non enim praesent elementum. Faucibus a pellentesque sit amet porttitor eget. At elementum eu facilisis sed. Cursus mattis molestie a iaculis at erat. Lectus vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare. Ultrices dui sapien eget mi proin sed libero enim sed. Sapien faucibus et molestie ac feugiat sed lectus. Dui faucibus in ornare quam viverra orci sagittis eu volutpat. Integer quis auctor elit sed vulputate mi. Mattis aliquam faucibus purus in massa tempor nec. Vel quam elementum pulvinar etiam. Odio aenean sed adipiscing diam donec adipiscing tristique risus nec. Fringilla est ullamcorper eget nulla facilisi etiam. Convallis a cras semper auctor neque vitae tempus.
-        
-                    Leo vel fringilla est ullamcorper eget nulla facilisi etiam. Arcu bibendum at varius vel pharetra vel turpis nunc eget. Arcu dictum varius duis at consectetur lorem donec. Consequat nisl vel pretium lectus quam id leo in. Est lorem ipsum dolor sit amet consectetur adipiscing. Vitae sapien pellentesque habitant morbi tristique senectus et netus. Augue interdum velit euismod in pellentesque. Aliquam malesuada bibendum arcu vitae elementum curabitur. Sit amet mattis vulputate enim nulla. Cursus risus at ultrices mi. Nibh sit amet commodo nulla facilisi nullam. Nascetur ridiculus mus mauris vitae ultricies leo integer malesuada. Mattis enim ut tellus elementum sagittis vitae et leo. Ultricies mi quis hendrerit dolor magna. Id diam maecenas ultricies mi eget mauris pharetra et.
-                    
-                    Non sodales neque sodales ut etiam sit amet nisl purus. Enim blandit volutpat maecenas volutpat blandit aliquam etiam. Dui nunc mattis enim ut tellus elementum. Purus viverra accumsan in nisl nisi scelerisque. Viverra nam libero justo laoreet sit amet cursus sit amet. Vestibulum morbi blandit cursus risus at ultrices mi tempus. Pharetra magna ac placerat vestibulum. Et tortor consequat id porta nibh venenatis. Pulvinar etiam non quam lacus suspendisse faucibus interdum posuere. Elementum integer enim neque volutpat ac tincidunt vitae semper quis. Gravida rutrum quisque non tellus orci ac auctor augue. Nisl rhoncus mattis rhoncus urna neque viverra justo nec ultrices. Elementum integer enim neque volutpat ac. Amet dictum sit amet justo donec enim diam vulputate ut.
-                </p>
-            </section>
-
-            <section id="section5">
-                <h1>Section 5</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pellentesque habitant morbi tristique senectus et netus et. Phasellus egestas tellus rutrum tellus pellentesque eu. Diam maecenas ultricies mi eget mauris pharetra et ultrices. At ultrices mi tempus imperdiet nulla. Ultricies mi quis hendrerit dolor magna. Porttitor rhoncus dolor purus non enim praesent elementum. Faucibus a pellentesque sit amet porttitor eget. At elementum eu facilisis sed. Cursus mattis molestie a iaculis at erat. Lectus vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare. Ultrices dui sapien eget mi proin sed libero enim sed. Sapien faucibus et molestie ac feugiat sed lectus. Dui faucibus in ornare quam viverra orci sagittis eu volutpat. Integer quis auctor elit sed vulputate mi. Mattis aliquam faucibus purus in massa tempor nec. Vel quam elementum pulvinar etiam. Odio aenean sed adipiscing diam donec adipiscing tristique risus nec. Fringilla est ullamcorper eget nulla facilisi etiam. Convallis a cras semper auctor neque vitae tempus.
-        
-                    Leo vel fringilla est ullamcorper eget nulla facilisi etiam. Arcu bibendum at varius vel pharetra vel turpis nunc eget. Arcu dictum varius duis at consectetur lorem donec. Consequat nisl vel pretium lectus quam id leo in. Est lorem ipsum dolor sit amet consectetur adipiscing. Vitae sapien pellentesque habitant morbi tristique senectus et netus. Augue interdum velit euismod in pellentesque. Aliquam malesuada bibendum arcu vitae elementum curabitur. Sit amet mattis vulputate enim nulla. Cursus risus at ultrices mi. Nibh sit amet commodo nulla facilisi nullam. Nascetur ridiculus mus mauris vitae ultricies leo integer malesuada. Mattis enim ut tellus elementum sagittis vitae et leo. Ultricies mi quis hendrerit dolor magna. Id diam maecenas ultricies mi eget mauris pharetra et.
-                    
-                    Non sodales neque sodales ut etiam sit amet nisl purus. Enim blandit volutpat maecenas volutpat blandit aliquam etiam. Dui nunc mattis enim ut tellus elementum. Purus viverra accumsan in nisl nisi scelerisque. Viverra nam libero justo laoreet sit amet cursus sit amet. Vestibulum morbi blandit cursus risus at ultrices mi tempus. Pharetra magna ac placerat vestibulum. Et tortor consequat id porta nibh venenatis. Pulvinar etiam non quam lacus suspendisse faucibus interdum posuere. Elementum integer enim neque volutpat ac tincidunt vitae semper quis. Gravida rutrum quisque non tellus orci ac auctor augue. Nisl rhoncus mattis rhoncus urna neque viverra justo nec ultrices. Elementum integer enim neque volutpat ac. Amet dictum sit amet justo donec enim diam vulputate ut.
-                </p>
-            </section>
+        <div>
+            <a href="#"><img src="fleche.png" alt="Retour en haut de la page" id="fleche_haut_page"></a>
         </div>
     </div>
 
-    <div>
-    <!-- flèche qui permet le retour en haut de la page -->
-        <a href="#"><img src="fleche.png" alt="Retour en haut de la page" id="fleche_haut_page"></a>
-    </div>
-
-
-<!-- ------------------------------------------------------FOOTER----------------------------------------------------------- -->
     <footer>
-
-        <div class= bande_couleur>
-
+        <div class="bande_couleur">
             <div class="bas_gauche">
-                <center><img src="image/genet-x.ico" height="30%" width="110%" id="logo">
-                <div class="barre_blanche"></div><br>
-                <b><p>Projet étudiant EPITA</p></b>
-                <b><p>Réalisé par :</p></b>
-                <b><p>Victor Goubaud, Mattéo Lachambre, Charlie Moreau</p></b>
-                <b><p>Kylian Dufailly, Mathieu Clerc</p></b></center>
+                <center>
+                    <img src="image/genet-x.ico" height="30%" width="110%" id="logo">
+                    <div class="barre_blanche"></div><br>
+                    <b><p>Projet étudiant EPITA</p></b>
+                    <b><p>Réalisé par :</p></b>
+                    <b><p>Victor Goubaud, Mattéo Lachambre, Charlie Moreau</p></b>
+                    <b><p>Kylian Dufailly, Mathieu Clerc</p></b>
+                </center>
             </div>
-            <div class="bas_droite">
-                <img src="image/genet-x_logo.png" height="75%" width="60%" id="logo">
-            </div>
-
-
         </div>
         <div class="droit">
-            <center><p><i>©2026 Genet-X - Tous droits réservés</i></p></center>
+            <center><p><i>©2026 Genet-X — Tous droits réservés</i></p></center>
         </div>
-
     </footer>
-    
-
-
 
     <script>
-        window.onscroll = function () { barre_fixe() }; //lorsque l'utilisateur scroll, la fonction barre_fixe est appelée
+        window.onscroll = function () { barre_fixe(); };
     </script>
-
-
 </body>
-
-
-
 </html>

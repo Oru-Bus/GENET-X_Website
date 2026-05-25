@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GENET-X — Présentation du projet</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tauri&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS_page.css">
+    <link rel="stylesheet" href="CSS.css">
+    <script src="java_projet_jeu.js"></script>
+    <style>
+        /* Tag pills */
+        .tags { margin: 10px 0 20px; }
+        .tag {
+            display: inline-block;
+            background: #FCDD8C;
+            color: #26547C;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 4px 14px;
+            border-radius: 20px;
+            margin: 4px 4px 4px 0;
+        }
+        /* Feature grid */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 18px;
+            margin: 20px 0;
+        }
+        .feature-box {
+            background: #f5f4fa;
+            border-left: 4px solid #FCDD8C;
+            border-radius: 10px;
+            padding: 16px 18px;
+        }
+        .feature-box h3 {
+            font-family: 'Dosis', sans-serif;
+            color: #26547C;
+            margin: 0 0 6px;
+            font-size: 1rem;
+        }
+        .feature-box p {
+            font-family: 'Roboto', sans-serif;
+            font-size: 0.9rem;
+            color: #444;
+            margin: 0;
+        }
+        /* Quest list */
+        .quest-list {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0;
+        }
+        .quest-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
+            font-family: 'Roboto', sans-serif;
+            font-size: 0.95rem;
+        }
+        .quest-num {
+            background: linear-gradient(135deg, #FCDD8C, #C9BD9C);
+            color: #26547C;
+            font-weight: 700;
+            font-family: 'Dosis', sans-serif;
+            min-width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            flex-shrink: 0;
+        }
+        /* Tech pills */
+        .tech-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin: 16px 0;
+        }
+        .tech-pill {
+            background: #26547C;
+            color: #FCDD8C;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 600;
+            padding: 8px 18px;
+            border-radius: 20px;
+        }
+        /* Role table */
+        .role-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0;
+            font-family: 'Roboto', sans-serif;
+        }
+        .role-table th {
+            background: #FCDD8C;
+            color: #26547C;
+            font-family: 'Dosis', sans-serif;
+            padding: 10px 14px;
+            text-align: left;
+        }
+        .role-table td {
+            padding: 9px 14px;
+            border-bottom: 1px solid #eee;
+            font-size: 0.93rem;
+        }
+        .role-table tr:last-child td { border-bottom: none; }
+        .role-table tr:nth-child(even) td { background: #fafafa; }
+    </style>
+</head>
+
+<body>
+    <div class="transition-layer"></div>
+
+    <!-- NAVBAR -->
+    <div id="barre-nav">
+        <div class="texte-menu-deroulant">
+            <a href="index.html"><img src="image/genet-x.ico" height="80px" width="100%" id="logo"></a>
+        </div>
+        <div class="texte-menu-deroulant">
+            <button class="bouton-deroulant">Le Jeu</button>
+            <div class="contenu-deroulant">
+                <a href="projet.html">Présentation</a>
+                <a href="regles.html">Règles</a>
+                <a href="connexion_lan.html">Connexion LAN</a>
+            </div>
+        </div>
+        <div class="texte-menu-deroulant">
+            <button class="bouton-deroulant">L'équipe</button>
+            <div class="contenu-deroulant">
+                <a href="membres.html">Les Membres</a>
+            </div>
+        </div>
+        <div class="texte-menu-deroulant">
+            <button class="bouton-deroulant">Ressources</button>
+            <div class="contenu-deroulant">
+                <a href="ressources.html">Ressources externes</a>
+                <a href="telechargements.html">Téléchargements</a>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <div id="header">Présentation du projet</div>
+
+        <div class="rang">
+            <!-- MENU LATÉRAL GAUCHE -->
+            <div class="gauche">
+                <h2>Menu</h2>
+                <input type="text" id="recherche" onkeyup="menu()" placeholder="Rechercher..." title="Rechercher">
+                <ul id="menu">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="projet.html">Présentation</a></li>
+                    <li><a href="membres.html">Les Membres</a></li>
+                    <li><a href="regles.html">Règles</a></li>
+                    <li><a href="connexion_lan.html">Connexion LAN</a></li>
+                    <li><a href="ressources.html">Ressources</a></li>
+                    <li><a href="telechargements.html">Téléchargements</a></li>
+                </ul>
+            </div>
+
+            <!-- SIDENAV -->
+            <div id="mySidenav" class="sidenav">
+                <a href="#" id="sous_titre_1" onclick="scrollToSection('section1');return false;">Concept</a>
+                <a href="#" id="sous_titre_2" onclick="scrollToSection('section2');return false;">Gameplay</a>
+                <a href="#" id="sous_titre_3" onclick="scrollToSection('section3');return false;" id="quetes">Quêtes</a>
+                <a href="#" id="sous_titre_4" onclick="scrollToSection('section4');return false;" id="carte">Carte</a>
+                <a href="#" id="sous_titre_5" onclick="scrollToSection('section5');return false;" id="technique">Technique</a>
+            </div>
+
+            <!-- CONTENU PRINCIPAL -->
+            <div id="centre_page">
+
+                <section id="section1">
+                    <h1>Le concept de GENET-X</h1>
+                    <div class="tags">
+                        <span class="tag">RPG</span>
+                        <span class="tag">Coopératif 2D</span>
+                        <span class="tag">Puzzle</span>
+                        <span class="tag">Aventure</span>
+                        <span class="tag">Python / Pygame</span>
+                    </div>
+                    <texte>
+                        GENET-X est un jeu multijoueur jouable uniquement en duo. Les deux joueurs incarnent un scientifique
+                        et une scientifique envoyés sur un archipel ravagé par une pandémie. Exploitant leur génétique différente,
+                        ils accèdent à des îles où ils sont les seuls à survivre.<br><br>
+                        En résolvant des énigmes coopératives, ils reçoivent des indices sur la nature de la pandémie et
+                        débloquent de nouvelles îles, jusqu'à atteindre la dernière où se trouve la solution pour sauver l'archipel.
+                    </texte>
+
+                    <br>
+                    <div class="feature-grid">
+                        <div class="feature-box">
+                            <h3>🎮 Genre</h3>
+                            <p>RPG vue du dessus — puzzle, réflexion, aventure, simulation</p>
+                        </div>
+                        <div class="feature-box">
+                            <h3>🖼️ Style graphique</h3>
+                            <p>Pixel art 2D — personnages entièrement créés par l'équipe</p>
+                        </div>
+                        <div class="feature-box">
+                            <h3>🌐 Multijoueur</h3>
+                            <p>Connexion LAN — strictement 2 joueurs simultanés</p>
+                        </div>
+                        <div class="feature-box">
+                            <h3>🎵 Musiques</h3>
+                            <p>Bandes sonores dynamiques qui évoluent selon la progression</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="section2">
+                    <h1>Mécaniques de gameplay</h1>
+                    <texte>
+                        <b>Exploration &amp; progression</b><br>
+                        Le jeu est structuré en 5 îles. Une fois toutes les quêtes d'une île accomplies, un portail apparaît
+                        pour accéder à la suivante. Chaque passage nécessite un fragment de clé (Clé_1 à Clé_5) récupéré
+                        dans les grottes lors d'interactions.<br><br>
+
+                        <b>Coopération asymétrique</b><br>
+                        La conception repose sur la complémentarité des deux joueurs : l'un possède les informations,
+                        l'autre effectue les actions. Ils doivent communiquer constamment pour avancer.<br><br>
+
+                        <b>Ennemis &amp; bots</b><br>
+                        Des créatures mutantes peuplent les zones, incarnant les effets de la pandémie. Chaque type de bot
+                        est lié à un biome particulier (grottes, zones de sable, laboratoires, cristaux finaux).
+                        Ils patrouillent, détectent les joueurs et attaquent en cas d'approche.<br><br>
+
+                        <b>Inventaire &amp; objets</b><br>
+                        Un système de loot aléatoire dans les grottes enrichit le gameplay. Les fragments de clés,
+                        eux, sont fixes et indispensables à la progression du scénario.<br><br>
+
+                        <b>Sauvegarde</b><br>
+                        La progression est sauvegardable à tout moment depuis le menu paramètres. Les données
+                        (positions, inventaires, quêtes, musique) sont stockées dans des fichiers JSON numérotés (save_1, save_2…).
+                    </texte>
+                </section>
+
+                <section id="section3">
+                    <h1>Les 6 quêtes</h1>
+                    <texte>Chaque quête impose une coopération active entre les deux joueurs. Certaines se résolvent
+                    via l'interface de suivi, d'autres nécessitent de trouver des panneaux de contrôle dans le monde.</texte>
+
+                    <ul class="quest-list">
+                        <li>
+                            <div class="quest-num">1</div>
+                            <div><b>Séquençage génétique</b> — L'un consulte un carnet d'indices, l'autre reconstitue
+                            la séquence ADN par drag &amp; drop dans l'interface.</div>
+                        </li>
+                        <li>
+                            <div class="quest-num">2</div>
+                            <div><b>Équilibre écologique</b> — Un joueur lit les conditions de vie des plantes, l'autre
+                            ajuste des jauges d'humidité et de toxicité pour trouver le bon équilibre.</div>
+                        </li>
+                        <li>
+                            <div class="quest-num">3</div>
+                            <div><b>Séquences mémorisées</b> — Trois niveaux de difficulté : sélection de chiffres dans
+                            l'ordre, opérations mathématiques, puis boutons symboliques à ordre aléatoire en cas d'erreur.</div>
+                        </li>
+                        <li>
+                            <div class="quest-num">4</div>
+                            <div><b>Code Morse</b> — L'un dicte un mot à transcrire, l'autre saisit les points et traits
+                            correspondants lettre par lettre.</div>
+                        </li>
+                        <li>
+                            <div class="quest-num">5</div>
+                            <div><b>Labyrinthe aveugle</b> — L'un voit la carte globale du labyrinthe 7×7, l'autre y est
+                            plongé sans visibilité : guidage vocal obligatoire.</div>
+                        </li>
+                        <li>
+                            <div class="quest-num">6</div>
+                            <div><b>Synchronisation finale</b> — Les 5 fragments réunis, les deux joueurs reproduisent
+                            simultanément une séquence de couleurs. Toute erreur régénère une nouvelle séquence aléatoire.</div>
+                        </li>
+                    </ul>
+                </section>
+
+                <section id="section4">
+                    <h1>La carte &amp; l'univers</h1>
+                    <texte>
+                        La carte du jeu a été conçue avec le logiciel <b>Tiled</b> et intégrée grâce à la bibliothèque
+                        <b>PyTMX</b>. L'archipel est composé de 5 îles aux ambiances distinctes : plages de sable,
+                        jungles, grottes, laboratoires et zones cristallisées en fin de jeu.<br><br>
+
+                        <b>Rendu optimisé</b> — Le moteur n'affiche que les tuiles visibles à l'écran autour du joueur,
+                        permettant des cartes larges sans ralentissement. Un système de zoom dynamique complète
+                        la gestion de la caméra centrée sur le personnage local.<br><br>
+
+                        <b>Interactions</b> — Les grottes contiennent deux types de zones interactives : objets aléatoires
+                        de loot et fragments de clés fixes. Les portails inter-îles apparaissent après validation de
+                        toutes les quêtes de la zone.
+                    </texte>
+                </section>
+
+                <section id="section5">
+                    <h1>Architecture technique</h1>
+
+                    <div class="tech-grid">
+                        <span class="tech-pill">Python 3</span>
+                        <span class="tech-pill">Pygame</span>
+                        <span class="tech-pill">PyTMX</span>
+                        <span class="tech-pill">TCP / UDP</span>
+                        <span class="tech-pill">JSON</span>
+                        <span class="tech-pill">Tiled</span>
+                        <span class="tech-pill">WiX Toolset</span>
+                        <span class="tech-pill">GitHub Actions</span>
+                    </div>
+
+                    <texte>
+                        <b>Réseau LAN</b><br>
+                        UDP pour la transmission fluide des coordonnées de déplacement — TCP pour les données critiques
+                        (connexion, validation de quêtes, sauvegarde). Détection automatique des serveurs sur le sous-réseau
+                        local, avec validation par code d'identification pour éviter les faux positifs (imprimantes, etc.).<br><br>
+
+                        <b>Architecture client / serveur</b><br>
+                        Un joueur héberge la partie (serveur), l'autre se connecte (client). Le serveur cesse d'émettre
+                        dès que 2 joueurs sont présents. En cas de déconnexion, les deux joueurs sont renvoyés au menu
+                        principal après 10 secondes.<br><br>
+
+                        <b>Exécutable &amp; déploiement</b><br>
+                        Le jeu est distribué sous forme d'installateur <b>.msi</b> créé avec WiX Toolset. Il intègre
+                        l'interpréteur Python, toutes les dépendances, cartes, musiques et vidéos. Un fichier
+                        <code>uninstall.exe</code> est généré automatiquement. Les sauvegardes et configurations
+                        de touches sont stockées dans le dossier utilisateur pour éviter tout besoin de droits admin.<br><br>
+
+                        <b>Communication &amp; outils</b><br>
+                        Réunions bi-hebdomadaires, serveur Discord avec webhooks GitHub, deux dépôts privés GitHub
+                        (le second plus structuré que le premier), gestion des branches. Un GEM Gemini dédié à
+                        l'apprentissage de Pygame a été utilisé comme mentor pédagogique (sans génération directe de code).
+                    </texte>
+
+                    <br><br>
+                    <h1>Répartition des rôles</h1>
+                    <table class="role-table">
+                        <tr><th>Responsabilité</th><th>Membre</th></tr>
+                        <tr><td>Connexion LAN, cinématiques, sauvegarde</td><td>Mattéo L.</td></tr>
+                        <tr><td>Menu, graphismes joueurs, exécutable .msi</td><td>Mathieu C.</td></tr>
+                        <tr><td>Équipements, hitbox, déplacements</td><td>Kylian D.</td></tr>
+                        <tr><td>Génétique gameplay, limites de la carte</td><td>Charlie M.</td></tr>
+                        <tr><td>Site internet, graphismes cartes, énigmes</td><td>Victor G.</td></tr>
+                    </table>
+                </section>
+
+            </div>
+        </div>
+
+        <!-- RETOUR EN HAUT -->
+        <div>
+            <a href="#"><img src="fleche.png" alt="Retour en haut de la page" id="fleche_haut_page"></a>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="bande_couleur">
+            <div class="bas_gauche">
+                <center>
+                    <img src="image/genet-x.ico" height="30%" width="110%" id="logo">
+                    <div class="barre_blanche"></div><br>
+                    <b><p>Projet étudiant EPITA</p></b>
+                    <b><p>Réalisé par :</p></b>
+                    <b><p>Victor Goubaud, Mattéo Lachambre, Charlie Moreau</p></b>
+                    <b><p>Kylian Dufailly, Mathieu Clerc</p></b>
+                </center>
+            </div>
+        </div>
+        <div class="droit">
+            <center><p><i>©2026 Genet-X — Tous droits réservés</i></p></center>
+        </div>
+    </footer>
+
+    <script>
+        window.onscroll = function () { barre_fixe(); };
+    </script>
+</body>
+</html>
